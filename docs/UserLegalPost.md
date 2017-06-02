@@ -14,7 +14,6 @@ Name | Type | Description | Notes
 **legal_representative_first_name** | **str** | The firstname of the company’s Legal representative person | [optional] 
 **legal_representative_last_name** | **str** | The lastname of the company’s Legal representative person | [optional] 
 **tag** | **str** | Custom data that you can add to this item | [optional] 
-**email** | **str** | The user&#39;s email address - must be a valid email | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

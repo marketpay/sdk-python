@@ -31,57 +31,57 @@ class TestPayInsRedsysApi(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_pay_ins_redsys_get_payment(self):
+    def test_pay_ins_redsys_redsys_get_payment(self):
         """
-        Test case for pay_ins_redsys_get_payment
+        Test case for pay_ins_redsys_redsys_get_payment
 
         View a Redsys payment
         """
         pass
 
-    def test_pay_ins_redsys_get_preauthorization(self):
+    def test_pay_ins_redsys_redsys_get_preauthorization(self):
         """
-        Test case for pay_ins_redsys_get_preauthorization
+        Test case for pay_ins_redsys_redsys_get_preauthorization
 
         View a Redsys Preauthorization
         """
         pass
 
-    def test_pay_ins_redsys_post_pay_by_web(self):
+    def test_pay_ins_redsys_redsys_post_payment_by_web(self):
         """
-        Test case for pay_ins_redsys_post_pay_by_web
+        Test case for pay_ins_redsys_redsys_post_payment_by_web
 
         Create a Redsys PayIn Request
         """
         pass
 
-    def test_pay_ins_redsys_post_preauthorization_cancellation(self):
+    def test_pay_ins_redsys_redsys_post_preauthorization_by_web(self):
         """
-        Test case for pay_ins_redsys_post_preauthorization_cancellation
-
-        Cancels a Preauthorization
-        """
-        pass
-
-    def test_pay_ins_redsys_post_preauthorization_confirmation(self):
-        """
-        Test case for pay_ins_redsys_post_preauthorization_confirmation
-
-        Confirms a Preauthorization
-        """
-        pass
-
-    def test_pay_ins_redsys_post_preauthorize_by_web(self):
-        """
-        Test case for pay_ins_redsys_post_preauthorize_by_web
+        Test case for pay_ins_redsys_redsys_post_preauthorization_by_web
 
         Create a Redsys Preauthorization Request
         """
         pass
 
-    def test_pay_ins_redsys_post_refund(self):
+    def test_pay_ins_redsys_redsys_post_preauthorization_cancellation(self):
         """
-        Test case for pay_ins_redsys_post_refund
+        Test case for pay_ins_redsys_redsys_post_preauthorization_cancellation
+
+        Cancels a Preauthorization
+        """
+        pass
+
+    def test_pay_ins_redsys_redsys_post_preauthorization_confirmation(self):
+        """
+        Test case for pay_ins_redsys_redsys_post_preauthorization_confirmation
+
+        Confirms a Preauthorization
+        """
+        pass
+
+    def test_pay_ins_redsys_redsys_post_refund(self):
+        """
+        Test case for pay_ins_redsys_redsys_post_refund
 
         Create a Redsys Payment Refund
         """

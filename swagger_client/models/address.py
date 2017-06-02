@@ -75,6 +75,8 @@ class Address(object):
         :param address_line1: The address_line1 of this Address.
         :type: str
         """
+        if address_line1 is None:
+            raise ValueError("Invalid value for `address_line1`, must not be `None`")
 
         self._address_line1 = address_line1
 
@@ -121,6 +123,8 @@ class Address(object):
         :param city: The city of this Address.
         :type: str
         """
+        if city is None:
+            raise ValueError("Invalid value for `city`, must not be `None`")
 
         self._city = city
 
@@ -167,6 +171,8 @@ class Address(object):
         :param postal_code: The postal_code of this Address.
         :type: str
         """
+        if postal_code is None:
+            raise ValueError("Invalid value for `postal_code`, must not be `None`")
 
         self._postal_code = postal_code
 
@@ -241,6 +247,9 @@ class Address(object):
         """
         Returns true if both objects are equal
         """
+        if not isinstance(other, Address):
+            return False
+
         return self.__dict__ == other.__dict__
 
     def __ne__(self, other):

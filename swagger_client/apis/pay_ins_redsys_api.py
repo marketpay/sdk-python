@@ -40,7 +40,7 @@ class PayInsRedsysApi(object):
                 config.api_client = ApiClient()
             self.api_client = config.api_client
 
-    def pay_ins_redsys_get_payment(self, pay_in_id, **kwargs):
+    def pay_ins_redsys_redsys_get_payment(self, pay_in_id, **kwargs):
         """
         View a Redsys payment
         
@@ -50,23 +50,23 @@ class PayInsRedsysApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pay_ins_redsys_get_payment(pay_in_id, callback=callback_function)
+        >>> thread = api.pay_ins_redsys_redsys_get_payment(pay_in_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int pay_in_id: The Id of a payment (required)
-        :return: PayInsResponse
+        :return: RedsysPayInsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.pay_ins_redsys_get_payment_with_http_info(pay_in_id, **kwargs)
+            return self.pay_ins_redsys_redsys_get_payment_with_http_info(pay_in_id, **kwargs)
         else:
-            (data) = self.pay_ins_redsys_get_payment_with_http_info(pay_in_id, **kwargs)
+            (data) = self.pay_ins_redsys_redsys_get_payment_with_http_info(pay_in_id, **kwargs)
             return data
 
-    def pay_ins_redsys_get_payment_with_http_info(self, pay_in_id, **kwargs):
+    def pay_ins_redsys_redsys_get_payment_with_http_info(self, pay_in_id, **kwargs):
         """
         View a Redsys payment
         
@@ -76,12 +76,12 @@ class PayInsRedsysApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pay_ins_redsys_get_payment_with_http_info(pay_in_id, callback=callback_function)
+        >>> thread = api.pay_ins_redsys_redsys_get_payment_with_http_info(pay_in_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int pay_in_id: The Id of a payment (required)
-        :return: PayInsResponse
+        :return: RedsysPayInsResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -97,13 +97,13 @@ class PayInsRedsysApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method pay_ins_redsys_get_payment" % key
+                    " to method pay_ins_redsys_redsys_get_payment" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'pay_in_id' is set
         if ('pay_in_id' not in params) or (params['pay_in_id'] is None):
-            raise ValueError("Missing the required parameter `pay_in_id` when calling `pay_ins_redsys_get_payment`")
+            raise ValueError("Missing the required parameter `pay_in_id` when calling `pay_ins_redsys_redsys_get_payment`")
 
 
         collection_formats = {}
@@ -135,7 +135,7 @@ class PayInsRedsysApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='PayInsResponse',
+                                        response_type='RedsysPayInsResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -143,7 +143,7 @@ class PayInsRedsysApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def pay_ins_redsys_get_preauthorization(self, preauthorization_id, **kwargs):
+    def pay_ins_redsys_redsys_get_preauthorization(self, preauthorization_id, **kwargs):
         """
         View a Redsys Preauthorization
         
@@ -153,23 +153,23 @@ class PayInsRedsysApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pay_ins_redsys_get_preauthorization(preauthorization_id, callback=callback_function)
+        >>> thread = api.pay_ins_redsys_redsys_get_preauthorization(preauthorization_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int preauthorization_id: The Id of a Redsys Preauthorization (required)
-        :return: PreauthorizeResponse
+        :return: RedsysPreauthorizeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.pay_ins_redsys_get_preauthorization_with_http_info(preauthorization_id, **kwargs)
+            return self.pay_ins_redsys_redsys_get_preauthorization_with_http_info(preauthorization_id, **kwargs)
         else:
-            (data) = self.pay_ins_redsys_get_preauthorization_with_http_info(preauthorization_id, **kwargs)
+            (data) = self.pay_ins_redsys_redsys_get_preauthorization_with_http_info(preauthorization_id, **kwargs)
             return data
 
-    def pay_ins_redsys_get_preauthorization_with_http_info(self, preauthorization_id, **kwargs):
+    def pay_ins_redsys_redsys_get_preauthorization_with_http_info(self, preauthorization_id, **kwargs):
         """
         View a Redsys Preauthorization
         
@@ -179,12 +179,12 @@ class PayInsRedsysApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pay_ins_redsys_get_preauthorization_with_http_info(preauthorization_id, callback=callback_function)
+        >>> thread = api.pay_ins_redsys_redsys_get_preauthorization_with_http_info(preauthorization_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int preauthorization_id: The Id of a Redsys Preauthorization (required)
-        :return: PreauthorizeResponse
+        :return: RedsysPreauthorizeResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -200,13 +200,13 @@ class PayInsRedsysApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method pay_ins_redsys_get_preauthorization" % key
+                    " to method pay_ins_redsys_redsys_get_preauthorization" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'preauthorization_id' is set
         if ('preauthorization_id' not in params) or (params['preauthorization_id'] is None):
-            raise ValueError("Missing the required parameter `preauthorization_id` when calling `pay_ins_redsys_get_preauthorization`")
+            raise ValueError("Missing the required parameter `preauthorization_id` when calling `pay_ins_redsys_redsys_get_preauthorization`")
 
 
         collection_formats = {}
@@ -238,7 +238,7 @@ class PayInsRedsysApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='PreauthorizeResponse',
+                                        response_type='RedsysPreauthorizeResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -246,7 +246,7 @@ class PayInsRedsysApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def pay_ins_redsys_post_pay_by_web(self, **kwargs):
+    def pay_ins_redsys_redsys_post_payment_by_web(self, **kwargs):
         """
         Create a Redsys PayIn Request
         Prepares a payment on Redsys. The data returned is used to show the Redsys interface to the user.  Once the payment is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\" -H \"Cache-Control: no-cache\" -H \"Postman-Token: c313f10b-0de1-227e-53d2-f721f25cd79d\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
@@ -256,23 +256,23 @@ class PayInsRedsysApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pay_ins_redsys_post_pay_by_web(callback=callback_function)
+        >>> thread = api.pay_ins_redsys_redsys_post_payment_by_web(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param PayByWebPost redsys_pay_in: Redsys PayIn Request Object params
-        :return: PayByWebResponse
+        :param RedsysPayByWebPost redsys_pay_in: Redsys PayIn Request Object params
+        :return: RedsysPayByWebResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.pay_ins_redsys_post_pay_by_web_with_http_info(**kwargs)
+            return self.pay_ins_redsys_redsys_post_payment_by_web_with_http_info(**kwargs)
         else:
-            (data) = self.pay_ins_redsys_post_pay_by_web_with_http_info(**kwargs)
+            (data) = self.pay_ins_redsys_redsys_post_payment_by_web_with_http_info(**kwargs)
             return data
 
-    def pay_ins_redsys_post_pay_by_web_with_http_info(self, **kwargs):
+    def pay_ins_redsys_redsys_post_payment_by_web_with_http_info(self, **kwargs):
         """
         Create a Redsys PayIn Request
         Prepares a payment on Redsys. The data returned is used to show the Redsys interface to the user.  Once the payment is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\" -H \"Cache-Control: no-cache\" -H \"Postman-Token: c313f10b-0de1-227e-53d2-f721f25cd79d\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
@@ -282,12 +282,12 @@ class PayInsRedsysApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pay_ins_redsys_post_pay_by_web_with_http_info(callback=callback_function)
+        >>> thread = api.pay_ins_redsys_redsys_post_payment_by_web_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param PayByWebPost redsys_pay_in: Redsys PayIn Request Object params
-        :return: PayByWebResponse
+        :param RedsysPayByWebPost redsys_pay_in: Redsys PayIn Request Object params
+        :return: RedsysPayByWebResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -303,7 +303,7 @@ class PayInsRedsysApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method pay_ins_redsys_post_pay_by_web" % key
+                    " to method pay_ins_redsys_redsys_post_payment_by_web" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -342,7 +342,7 @@ class PayInsRedsysApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='PayByWebResponse',
+                                        response_type='RedsysPayByWebResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -350,229 +350,7 @@ class PayInsRedsysApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def pay_ins_redsys_post_preauthorization_cancellation(self, preauthorization_id, **kwargs):
-        """
-        Cancels a Preauthorization
-        
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.pay_ins_redsys_post_preauthorization_cancellation(preauthorization_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param int preauthorization_id: The Id of a Redsys PreauthorizationCancellation (required)
-        :param PreauthorizationCancellationPost preauthorization_cancellation: PreauthorizationCancellation Object params
-        :return: PreauthorizationCancellationResponse
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.pay_ins_redsys_post_preauthorization_cancellation_with_http_info(preauthorization_id, **kwargs)
-        else:
-            (data) = self.pay_ins_redsys_post_preauthorization_cancellation_with_http_info(preauthorization_id, **kwargs)
-            return data
-
-    def pay_ins_redsys_post_preauthorization_cancellation_with_http_info(self, preauthorization_id, **kwargs):
-        """
-        Cancels a Preauthorization
-        
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.pay_ins_redsys_post_preauthorization_cancellation_with_http_info(preauthorization_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param int preauthorization_id: The Id of a Redsys PreauthorizationCancellation (required)
-        :param PreauthorizationCancellationPost preauthorization_cancellation: PreauthorizationCancellation Object params
-        :return: PreauthorizationCancellationResponse
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['preauthorization_id', 'preauthorization_cancellation']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method pay_ins_redsys_post_preauthorization_cancellation" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'preauthorization_id' is set
-        if ('preauthorization_id' not in params) or (params['preauthorization_id'] is None):
-            raise ValueError("Missing the required parameter `preauthorization_id` when calling `pay_ins_redsys_post_preauthorization_cancellation`")
-
-
-        collection_formats = {}
-
-        resource_path = '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation'.replace('{format}', 'json')
-        path_params = {}
-        if 'preauthorization_id' in params:
-            path_params['PreauthorizationId'] = params['preauthorization_id']
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'preauthorization_cancellation' in params:
-            body_params = params['preauthorization_cancellation']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'text/json', 'application/json-patch+json'])
-
-        # Authentication setting
-        auth_settings = ['oauth2']
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='PreauthorizationCancellationResponse',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def pay_ins_redsys_post_preauthorization_confirmation(self, preauthorization_id, **kwargs):
-        """
-        Confirms a Preauthorization
-        
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.pay_ins_redsys_post_preauthorization_confirmation(preauthorization_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param int preauthorization_id: The Id of a Redsys PreauthorizationConfirmation (required)
-        :param PreauthorizationConfirmationPost preauthorization_confirmation: PreauthorizationConfirmation Object params
-        :return: PreauthorizationConfirmationResponse
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-        kwargs['_return_http_data_only'] = True
-        if kwargs.get('callback'):
-            return self.pay_ins_redsys_post_preauthorization_confirmation_with_http_info(preauthorization_id, **kwargs)
-        else:
-            (data) = self.pay_ins_redsys_post_preauthorization_confirmation_with_http_info(preauthorization_id, **kwargs)
-            return data
-
-    def pay_ins_redsys_post_preauthorization_confirmation_with_http_info(self, preauthorization_id, **kwargs):
-        """
-        Confirms a Preauthorization
-        
-        This method makes a synchronous HTTP request by default. To make an
-        asynchronous HTTP request, please define a `callback` function
-        to be invoked when receiving the response.
-        >>> def callback_function(response):
-        >>>     pprint(response)
-        >>>
-        >>> thread = api.pay_ins_redsys_post_preauthorization_confirmation_with_http_info(preauthorization_id, callback=callback_function)
-
-        :param callback function: The callback function
-            for asynchronous request. (optional)
-        :param int preauthorization_id: The Id of a Redsys PreauthorizationConfirmation (required)
-        :param PreauthorizationConfirmationPost preauthorization_confirmation: PreauthorizationConfirmation Object params
-        :return: PreauthorizationConfirmationResponse
-                 If the method is called asynchronously,
-                 returns the request thread.
-        """
-
-        all_params = ['preauthorization_id', 'preauthorization_confirmation']
-        all_params.append('callback')
-        all_params.append('_return_http_data_only')
-        all_params.append('_preload_content')
-        all_params.append('_request_timeout')
-
-        params = locals()
-        for key, val in iteritems(params['kwargs']):
-            if key not in all_params:
-                raise TypeError(
-                    "Got an unexpected keyword argument '%s'"
-                    " to method pay_ins_redsys_post_preauthorization_confirmation" % key
-                )
-            params[key] = val
-        del params['kwargs']
-        # verify the required parameter 'preauthorization_id' is set
-        if ('preauthorization_id' not in params) or (params['preauthorization_id'] is None):
-            raise ValueError("Missing the required parameter `preauthorization_id` when calling `pay_ins_redsys_post_preauthorization_confirmation`")
-
-
-        collection_formats = {}
-
-        resource_path = '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation'.replace('{format}', 'json')
-        path_params = {}
-        if 'preauthorization_id' in params:
-            path_params['PreauthorizationId'] = params['preauthorization_id']
-
-        query_params = {}
-
-        header_params = {}
-
-        form_params = []
-        local_var_files = {}
-
-        body_params = None
-        if 'preauthorization_confirmation' in params:
-            body_params = params['preauthorization_confirmation']
-        # HTTP header `Accept`
-        header_params['Accept'] = self.api_client.\
-            select_header_accept(['text/plain', 'application/json', 'text/json'])
-
-        # HTTP header `Content-Type`
-        header_params['Content-Type'] = self.api_client.\
-            select_header_content_type(['application/json', 'text/json', 'application/json-patch+json'])
-
-        # Authentication setting
-        auth_settings = ['oauth2']
-
-        return self.api_client.call_api(resource_path, 'POST',
-                                        path_params,
-                                        query_params,
-                                        header_params,
-                                        body=body_params,
-                                        post_params=form_params,
-                                        files=local_var_files,
-                                        response_type='PreauthorizationConfirmationResponse',
-                                        auth_settings=auth_settings,
-                                        callback=params.get('callback'),
-                                        _return_http_data_only=params.get('_return_http_data_only'),
-                                        _preload_content=params.get('_preload_content', True),
-                                        _request_timeout=params.get('_request_timeout'),
-                                        collection_formats=collection_formats)
-
-    def pay_ins_redsys_post_preauthorize_by_web(self, **kwargs):
+    def pay_ins_redsys_redsys_post_preauthorization_by_web(self, **kwargs):
         """
         Create a Redsys Preauthorization Request
         Prepares a preauthorization on Redsys. The data returned is used to show the Redsys interface to the user.  Once the preauthoriation is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\" -H \"Cache-Control: no-cache\" -H \"Postman-Token: c313f10b-0de1-227e-53d2-f721f25cd79d\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
@@ -582,23 +360,23 @@ class PayInsRedsysApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pay_ins_redsys_post_preauthorize_by_web(callback=callback_function)
+        >>> thread = api.pay_ins_redsys_redsys_post_preauthorization_by_web(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param PreauthorizeByWebPost redsys_preauthorization: RedsysPreauthorization Object params
-        :return: PreauthorizeByWebResponse
+        :param RedsysPreauthorizeByWebPost redsys_preauthorization: RedsysPreauthorization Object params
+        :return: RedsysPreauthorizeByWebResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.pay_ins_redsys_post_preauthorize_by_web_with_http_info(**kwargs)
+            return self.pay_ins_redsys_redsys_post_preauthorization_by_web_with_http_info(**kwargs)
         else:
-            (data) = self.pay_ins_redsys_post_preauthorize_by_web_with_http_info(**kwargs)
+            (data) = self.pay_ins_redsys_redsys_post_preauthorization_by_web_with_http_info(**kwargs)
             return data
 
-    def pay_ins_redsys_post_preauthorize_by_web_with_http_info(self, **kwargs):
+    def pay_ins_redsys_redsys_post_preauthorization_by_web_with_http_info(self, **kwargs):
         """
         Create a Redsys Preauthorization Request
         Prepares a preauthorization on Redsys. The data returned is used to show the Redsys interface to the user.  Once the preauthoriation is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\" -H \"Cache-Control: no-cache\" -H \"Postman-Token: c313f10b-0de1-227e-53d2-f721f25cd79d\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
@@ -608,12 +386,12 @@ class PayInsRedsysApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pay_ins_redsys_post_preauthorize_by_web_with_http_info(callback=callback_function)
+        >>> thread = api.pay_ins_redsys_redsys_post_preauthorization_by_web_with_http_info(callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param PreauthorizeByWebPost redsys_preauthorization: RedsysPreauthorization Object params
-        :return: PreauthorizeByWebResponse
+        :param RedsysPreauthorizeByWebPost redsys_preauthorization: RedsysPreauthorization Object params
+        :return: RedsysPreauthorizeByWebResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -629,7 +407,7 @@ class PayInsRedsysApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method pay_ins_redsys_post_preauthorize_by_web" % key
+                    " to method pay_ins_redsys_redsys_post_preauthorization_by_web" % key
                 )
             params[key] = val
         del params['kwargs']
@@ -668,7 +446,7 @@ class PayInsRedsysApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='PreauthorizeByWebResponse',
+                                        response_type='RedsysPreauthorizeByWebResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),
@@ -676,34 +454,229 @@ class PayInsRedsysApi(object):
                                         _request_timeout=params.get('_request_timeout'),
                                         collection_formats=collection_formats)
 
-    def pay_ins_redsys_post_refund(self, pay_in_id, **kwargs):
+    def pay_ins_redsys_redsys_post_preauthorization_cancellation(self, preauthorization_id, **kwargs):
         """
-        Create a Redsys Payment Refund
-        A PayIn Refund is a request to reimburse a user on their payment card. The money which has already been paid will automatically go back to the user’s bank account.              Minimum amount to refund is 1€.              If you're doing a partial Refund, note that you can only refund the same amount on the same transaction once per day (this is to prevent unintended duplicate refunds). After 24h you can do another refund of the same amount on the same transaction. If it is a different amount on the same transaction, there is not this limit.              If you do not specify DebitedFunds and Fees parameters, it will automatically fully refund the PayIn. However if you do provide one or the other, you must provide both. Note that Fees must be negative if you wish to refund them - adding a positive value for the Fees is a way to charge your customers for the Refund (in the same way you might for a PayIn, Transfer or any other Transaction
+        Cancels a Preauthorization
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pay_ins_redsys_post_refund(pay_in_id, callback=callback_function)
+        >>> thread = api.pay_ins_redsys_redsys_post_preauthorization_cancellation(preauthorization_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param int pay_in_id: The Id of a PayIn (required)
-        :param RefundPost redsys_refund: Refund Object params
-        :return: RefundResponse
+        :param int preauthorization_id: The Id of a Redsys PreauthorizationCancellation (required)
+        :param RedsysPreauthorizationCancellationPost redsys_preauthorization_cancellation: PreauthorizationCancellation Object params
+        :return: RedsysPreauthorizationCancellationResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('callback'):
-            return self.pay_ins_redsys_post_refund_with_http_info(pay_in_id, **kwargs)
+            return self.pay_ins_redsys_redsys_post_preauthorization_cancellation_with_http_info(preauthorization_id, **kwargs)
         else:
-            (data) = self.pay_ins_redsys_post_refund_with_http_info(pay_in_id, **kwargs)
+            (data) = self.pay_ins_redsys_redsys_post_preauthorization_cancellation_with_http_info(preauthorization_id, **kwargs)
             return data
 
-    def pay_ins_redsys_post_refund_with_http_info(self, pay_in_id, **kwargs):
+    def pay_ins_redsys_redsys_post_preauthorization_cancellation_with_http_info(self, preauthorization_id, **kwargs):
+        """
+        Cancels a Preauthorization
+        
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.pay_ins_redsys_redsys_post_preauthorization_cancellation_with_http_info(preauthorization_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param int preauthorization_id: The Id of a Redsys PreauthorizationCancellation (required)
+        :param RedsysPreauthorizationCancellationPost redsys_preauthorization_cancellation: PreauthorizationCancellation Object params
+        :return: RedsysPreauthorizationCancellationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['preauthorization_id', 'redsys_preauthorization_cancellation']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method pay_ins_redsys_redsys_post_preauthorization_cancellation" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'preauthorization_id' is set
+        if ('preauthorization_id' not in params) or (params['preauthorization_id'] is None):
+            raise ValueError("Missing the required parameter `preauthorization_id` when calling `pay_ins_redsys_redsys_post_preauthorization_cancellation`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation'.replace('{format}', 'json')
+        path_params = {}
+        if 'preauthorization_id' in params:
+            path_params['PreauthorizationId'] = params['preauthorization_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'redsys_preauthorization_cancellation' in params:
+            body_params = params['redsys_preauthorization_cancellation']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'text/json', 'application/json-patch+json'])
+
+        # Authentication setting
+        auth_settings = ['oauth2']
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='RedsysPreauthorizationCancellationResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def pay_ins_redsys_redsys_post_preauthorization_confirmation(self, preauthorization_id, **kwargs):
+        """
+        Confirms a Preauthorization
+        
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.pay_ins_redsys_redsys_post_preauthorization_confirmation(preauthorization_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param int preauthorization_id: The Id of a Redsys PreauthorizationConfirmation (required)
+        :param RedsysPreauthorizationConfirmationPost redsys_preauthorization_confirmation: PreauthorizationConfirmation Object params
+        :return: RedsysPreauthorizationConfirmationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.pay_ins_redsys_redsys_post_preauthorization_confirmation_with_http_info(preauthorization_id, **kwargs)
+        else:
+            (data) = self.pay_ins_redsys_redsys_post_preauthorization_confirmation_with_http_info(preauthorization_id, **kwargs)
+            return data
+
+    def pay_ins_redsys_redsys_post_preauthorization_confirmation_with_http_info(self, preauthorization_id, **kwargs):
+        """
+        Confirms a Preauthorization
+        
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.pay_ins_redsys_redsys_post_preauthorization_confirmation_with_http_info(preauthorization_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param int preauthorization_id: The Id of a Redsys PreauthorizationConfirmation (required)
+        :param RedsysPreauthorizationConfirmationPost redsys_preauthorization_confirmation: PreauthorizationConfirmation Object params
+        :return: RedsysPreauthorizationConfirmationResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+
+        all_params = ['preauthorization_id', 'redsys_preauthorization_confirmation']
+        all_params.append('callback')
+        all_params.append('_return_http_data_only')
+        all_params.append('_preload_content')
+        all_params.append('_request_timeout')
+
+        params = locals()
+        for key, val in iteritems(params['kwargs']):
+            if key not in all_params:
+                raise TypeError(
+                    "Got an unexpected keyword argument '%s'"
+                    " to method pay_ins_redsys_redsys_post_preauthorization_confirmation" % key
+                )
+            params[key] = val
+        del params['kwargs']
+        # verify the required parameter 'preauthorization_id' is set
+        if ('preauthorization_id' not in params) or (params['preauthorization_id'] is None):
+            raise ValueError("Missing the required parameter `preauthorization_id` when calling `pay_ins_redsys_redsys_post_preauthorization_confirmation`")
+
+
+        collection_formats = {}
+
+        resource_path = '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation'.replace('{format}', 'json')
+        path_params = {}
+        if 'preauthorization_id' in params:
+            path_params['PreauthorizationId'] = params['preauthorization_id']
+
+        query_params = {}
+
+        header_params = {}
+
+        form_params = []
+        local_var_files = {}
+
+        body_params = None
+        if 'redsys_preauthorization_confirmation' in params:
+            body_params = params['redsys_preauthorization_confirmation']
+        # HTTP header `Accept`
+        header_params['Accept'] = self.api_client.\
+            select_header_accept(['text/plain', 'application/json', 'text/json'])
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.\
+            select_header_content_type(['application/json', 'text/json', 'application/json-patch+json'])
+
+        # Authentication setting
+        auth_settings = ['oauth2']
+
+        return self.api_client.call_api(resource_path, 'POST',
+                                        path_params,
+                                        query_params,
+                                        header_params,
+                                        body=body_params,
+                                        post_params=form_params,
+                                        files=local_var_files,
+                                        response_type='RedsysPreauthorizationConfirmationResponse',
+                                        auth_settings=auth_settings,
+                                        callback=params.get('callback'),
+                                        _return_http_data_only=params.get('_return_http_data_only'),
+                                        _preload_content=params.get('_preload_content', True),
+                                        _request_timeout=params.get('_request_timeout'),
+                                        collection_formats=collection_formats)
+
+    def pay_ins_redsys_redsys_post_refund(self, pay_in_id, **kwargs):
         """
         Create a Redsys Payment Refund
         A PayIn Refund is a request to reimburse a user on their payment card. The money which has already been paid will automatically go back to the user’s bank account.              Minimum amount to refund is 1€.              If you're doing a partial Refund, note that you can only refund the same amount on the same transaction once per day (this is to prevent unintended duplicate refunds). After 24h you can do another refund of the same amount on the same transaction. If it is a different amount on the same transaction, there is not this limit.              If you do not specify DebitedFunds and Fees parameters, it will automatically fully refund the PayIn. However if you do provide one or the other, you must provide both. Note that Fees must be negative if you wish to refund them - adding a positive value for the Fees is a way to charge your customers for the Refund (in the same way you might for a PayIn, Transfer or any other Transaction
@@ -713,13 +686,40 @@ class PayInsRedsysApi(object):
         >>> def callback_function(response):
         >>>     pprint(response)
         >>>
-        >>> thread = api.pay_ins_redsys_post_refund_with_http_info(pay_in_id, callback=callback_function)
+        >>> thread = api.pay_ins_redsys_redsys_post_refund(pay_in_id, callback=callback_function)
 
         :param callback function: The callback function
             for asynchronous request. (optional)
         :param int pay_in_id: The Id of a PayIn (required)
-        :param RefundPost redsys_refund: Refund Object params
-        :return: RefundResponse
+        :param RedsysRefundPost redsys_refund: Refund Object params
+        :return: RedsysRefundResponse
+                 If the method is called asynchronously,
+                 returns the request thread.
+        """
+        kwargs['_return_http_data_only'] = True
+        if kwargs.get('callback'):
+            return self.pay_ins_redsys_redsys_post_refund_with_http_info(pay_in_id, **kwargs)
+        else:
+            (data) = self.pay_ins_redsys_redsys_post_refund_with_http_info(pay_in_id, **kwargs)
+            return data
+
+    def pay_ins_redsys_redsys_post_refund_with_http_info(self, pay_in_id, **kwargs):
+        """
+        Create a Redsys Payment Refund
+        A PayIn Refund is a request to reimburse a user on their payment card. The money which has already been paid will automatically go back to the user’s bank account.              Minimum amount to refund is 1€.              If you're doing a partial Refund, note that you can only refund the same amount on the same transaction once per day (this is to prevent unintended duplicate refunds). After 24h you can do another refund of the same amount on the same transaction. If it is a different amount on the same transaction, there is not this limit.              If you do not specify DebitedFunds and Fees parameters, it will automatically fully refund the PayIn. However if you do provide one or the other, you must provide both. Note that Fees must be negative if you wish to refund them - adding a positive value for the Fees is a way to charge your customers for the Refund (in the same way you might for a PayIn, Transfer or any other Transaction
+        This method makes a synchronous HTTP request by default. To make an
+        asynchronous HTTP request, please define a `callback` function
+        to be invoked when receiving the response.
+        >>> def callback_function(response):
+        >>>     pprint(response)
+        >>>
+        >>> thread = api.pay_ins_redsys_redsys_post_refund_with_http_info(pay_in_id, callback=callback_function)
+
+        :param callback function: The callback function
+            for asynchronous request. (optional)
+        :param int pay_in_id: The Id of a PayIn (required)
+        :param RedsysRefundPost redsys_refund: Refund Object params
+        :return: RedsysRefundResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
@@ -735,13 +735,13 @@ class PayInsRedsysApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method pay_ins_redsys_post_refund" % key
+                    " to method pay_ins_redsys_redsys_post_refund" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'pay_in_id' is set
         if ('pay_in_id' not in params) or (params['pay_in_id'] is None):
-            raise ValueError("Missing the required parameter `pay_in_id` when calling `pay_ins_redsys_post_refund`")
+            raise ValueError("Missing the required parameter `pay_in_id` when calling `pay_ins_redsys_redsys_post_refund`")
 
 
         collection_formats = {}
@@ -779,7 +779,7 @@ class PayInsRedsysApi(object):
                                         body=body_params,
                                         post_params=form_params,
                                         files=local_var_files,
-                                        response_type='RefundResponse',
+                                        response_type='RedsysRefundResponse',
                                         auth_settings=auth_settings,
                                         callback=params.get('callback'),
                                         _return_http_data_only=params.get('_return_http_data_only'),

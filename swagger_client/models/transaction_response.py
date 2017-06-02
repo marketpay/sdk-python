@@ -406,7 +406,6 @@ class TransactionResponse(object):
     def id(self):
         """
         Gets the id of this TransactionResponse.
-        The item's ID
 
         :return: The id of this TransactionResponse.
         :rtype: str
@@ -417,7 +416,6 @@ class TransactionResponse(object):
     def id(self, id):
         """
         Sets the id of this TransactionResponse.
-        The item's ID
 
         :param id: The id of this TransactionResponse.
         :type: str
@@ -429,7 +427,6 @@ class TransactionResponse(object):
     def creation_date(self):
         """
         Gets the creation_date of this TransactionResponse.
-        When the item was created
 
         :return: The creation_date of this TransactionResponse.
         :rtype: int
@@ -440,7 +437,6 @@ class TransactionResponse(object):
     def creation_date(self, creation_date):
         """
         Sets the creation_date of this TransactionResponse.
-        When the item was created
 
         :param creation_date: The creation_date of this TransactionResponse.
         :type: int
@@ -452,7 +448,6 @@ class TransactionResponse(object):
     def tag(self):
         """
         Gets the tag of this TransactionResponse.
-        Custom data that you can add to this item
 
         :return: The tag of this TransactionResponse.
         :rtype: str
@@ -463,7 +458,6 @@ class TransactionResponse(object):
     def tag(self, tag):
         """
         Sets the tag of this TransactionResponse.
-        Custom data that you can add to this item
 
         :param tag: The tag of this TransactionResponse.
         :type: str
@@ -513,6 +507,9 @@ class TransactionResponse(object):
         """
         Returns true if both objects are equal
         """
+        if not isinstance(other, TransactionResponse):
+            return False
+
         return self.__dict__ == other.__dict__
 
     def __ne__(self, other):

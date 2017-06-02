@@ -39,6 +39,14 @@ class TestCardsApi(unittest.TestCase):
         """
         pass
 
+    def test_cards_get_list(self):
+        """
+        Test case for cards_get_list
+
+        
+        """
+        pass
+
     def test_cards_put(self):
         """
         Test case for cards_put

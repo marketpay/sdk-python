@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **refunds_refund_get**
-> RefundResponse refunds_refund_get(refund_id)
+> UniversalPayRefundResponse refunds_refund_get(refund_id)
 
 View a Refund
 
@@ -45,7 +45,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**RefundResponse**](RefundResponse.md)
+[**UniversalPayRefundResponse**](UniversalPayRefundResponse.md)
 
 ### Authorization
 

@@ -5,6 +5,7 @@ All URIs are relative to *https://localhost/*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**wallets_get**](WalletsApi.md#wallets_get) | **GET** /v2.01/Wallets/{WalletId} | View a Wallet
+[**wallets_get_list**](WalletsApi.md#wallets_get_list) | **GET** /v2.01/Wallets | 
 [**wallets_get_transaction_list**](WalletsApi.md#wallets_get_transaction_list) | **GET** /v2.01/Wallets/{WalletId}/transactions | List a Wallet&#39;s Transactions
 [**wallets_post**](WalletsApi.md#wallets_post) | **POST** /v2.01/Wallets | Create a Wallet
 [**wallets_put**](WalletsApi.md#wallets_put) | **PUT** /v2.01/Wallets/{WalletId} | Update a Wallet
@@ -49,6 +50,56 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**WalletResponse**](WalletResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **wallets_get_list**
+> ResponseListWalletResponse wallets_get_list(page=page, per_page=per_page)
+
+
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: oauth2
+swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = swagger_client.WalletsApi()
+page = 56 # int |  (optional)
+per_page = 56 # int |  (optional)
+
+try: 
+    api_response = api_instance.wallets_get_list(page=page, per_page=per_page)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling WalletsApi->wallets_get_list: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **page** | **int**|  | [optional] 
+ **per_page** | **int**|  | [optional] 
+
+### Return type
+
+[**ResponseListWalletResponse**](ResponseListWalletResponse.md)
 
 ### Authorization
 

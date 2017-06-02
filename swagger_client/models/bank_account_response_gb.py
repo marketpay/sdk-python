@@ -238,7 +238,6 @@ class BankAccountResponseGb(object):
     def id(self):
         """
         Gets the id of this BankAccountResponseGb.
-        The item's ID
 
         :return: The id of this BankAccountResponseGb.
         :rtype: str
@@ -249,7 +248,6 @@ class BankAccountResponseGb(object):
     def id(self, id):
         """
         Sets the id of this BankAccountResponseGb.
-        The item's ID
 
         :param id: The id of this BankAccountResponseGb.
         :type: str
@@ -261,7 +259,6 @@ class BankAccountResponseGb(object):
     def creation_date(self):
         """
         Gets the creation_date of this BankAccountResponseGb.
-        When the item was created
 
         :return: The creation_date of this BankAccountResponseGb.
         :rtype: int
@@ -272,7 +269,6 @@ class BankAccountResponseGb(object):
     def creation_date(self, creation_date):
         """
         Sets the creation_date of this BankAccountResponseGb.
-        When the item was created
 
         :param creation_date: The creation_date of this BankAccountResponseGb.
         :type: int
@@ -284,7 +280,6 @@ class BankAccountResponseGb(object):
     def tag(self):
         """
         Gets the tag of this BankAccountResponseGb.
-        Custom data that you can add to this item
 
         :return: The tag of this BankAccountResponseGb.
         :rtype: str
@@ -295,7 +290,6 @@ class BankAccountResponseGb(object):
     def tag(self, tag):
         """
         Sets the tag of this BankAccountResponseGb.
-        Custom data that you can add to this item
 
         :param tag: The tag of this BankAccountResponseGb.
         :type: str
@@ -345,6 +339,9 @@ class BankAccountResponseGb(object):
         """
         Returns true if both objects are equal
         """
+        if not isinstance(other, BankAccountResponseGb):
+            return False
+
         return self.__dict__ == other.__dict__
 
     def __ne__(self, other):

@@ -192,7 +192,6 @@ class WalletResponse(object):
     def id(self):
         """
         Gets the id of this WalletResponse.
-        The item's ID
 
         :return: The id of this WalletResponse.
         :rtype: str
@@ -203,7 +202,6 @@ class WalletResponse(object):
     def id(self, id):
         """
         Sets the id of this WalletResponse.
-        The item's ID
 
         :param id: The id of this WalletResponse.
         :type: str
@@ -215,7 +213,6 @@ class WalletResponse(object):
     def creation_date(self):
         """
         Gets the creation_date of this WalletResponse.
-        When the item was created
 
         :return: The creation_date of this WalletResponse.
         :rtype: int
@@ -226,7 +223,6 @@ class WalletResponse(object):
     def creation_date(self, creation_date):
         """
         Sets the creation_date of this WalletResponse.
-        When the item was created
 
         :param creation_date: The creation_date of this WalletResponse.
         :type: int
@@ -238,7 +234,6 @@ class WalletResponse(object):
     def tag(self):
         """
         Gets the tag of this WalletResponse.
-        Custom data that you can add to this item
 
         :return: The tag of this WalletResponse.
         :rtype: str
@@ -249,7 +244,6 @@ class WalletResponse(object):
     def tag(self, tag):
         """
         Sets the tag of this WalletResponse.
-        Custom data that you can add to this item
 
         :param tag: The tag of this WalletResponse.
         :type: str
@@ -299,6 +293,9 @@ class WalletResponse(object):
         """
         Returns true if both objects are equal
         """
+        if not isinstance(other, WalletResponse):
+            return False
+
         return self.__dict__ == other.__dict__
 
     def __ne__(self, other):

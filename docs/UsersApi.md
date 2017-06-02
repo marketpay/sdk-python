@@ -20,6 +20,8 @@ Method | HTTP request | Description
 [**users_post_bank_account_us**](UsersApi.md#users_post_bank_account_us) | **POST** /v2.01/Users/{UserId}/bankaccounts/US | Create an US BankAccount
 [**users_post_legal**](UsersApi.md#users_post_legal) | **POST** /v2.01/Users/legal | Create a Legal User
 [**users_post_natural**](UsersApi.md#users_post_natural) | **POST** /v2.01/Users/natural | Create a Natural User
+[**users_put_legal**](UsersApi.md#users_put_legal) | **PUT** /v2.01/Users/legal/{UserId} | Update a Legal User
+[**users_put_natural**](UsersApi.md#users_put_natural) | **PUT** /v2.01/Users/natural/{UserId} | Update a Natural User
 
 
 # **users_get**
@@ -852,6 +854,112 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **user_natural** | [**UserNaturalPost**](UserNaturalPost.md)| UserNatural Object params | [optional] 
+
+### Return type
+
+[**UserNaturalResponse**](UserNaturalResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/json-patch+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **users_put_legal**
+> UserLegalResponse users_put_legal(user_id, user_legal=user_legal)
+
+Update a Legal User
+
+Note that the LegalRepresentativeBirthday field is a timestamp, but be careful to ensure that the time is midnight UTC (otherwise a local time can be understood as 23h UTC, and therefore rendering the wrong date which will present problems when needing to validate the KYC identity)
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: oauth2
+swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = swagger_client.UsersApi()
+user_id = 789 # int | The Id of a user
+user_legal = swagger_client.UserLegalPut() # UserLegalPut | UserLegal Object params (optional)
+
+try: 
+    # Update a Legal User
+    api_response = api_instance.users_put_legal(user_id, user_legal=user_legal)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UsersApi->users_put_legal: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **int**| The Id of a user | 
+ **user_legal** | [**UserLegalPut**](UserLegalPut.md)| UserLegal Object params | [optional] 
+
+### Return type
+
+[**UserLegalResponse**](UserLegalResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/json-patch+json
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **users_put_natural**
+> UserNaturalResponse users_put_natural(user_id, user_natural=user_natural)
+
+Update a Natural User
+
+Note that the Birthday field is a timestamp, but be careful to ensure that the time is midnight UTC (otherwise a local time can be understood as 23h UTC, and therefore rendering the wrong date which will present problems when needing to validate the KYC identity)
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: oauth2
+swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = swagger_client.UsersApi()
+user_id = 789 # int | The Id of a user
+user_natural = swagger_client.UserNaturalPut() # UserNaturalPut | UserNatural Object params (optional)
+
+try: 
+    # Update a Natural User
+    api_response = api_instance.users_put_natural(user_id, user_natural=user_natural)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling UsersApi->users_put_natural: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **user_id** | **int**| The Id of a user | 
+ **user_natural** | [**UserNaturalPut**](UserNaturalPut.md)| UserNatural Object params | [optional] 
 
 ### Return type
 

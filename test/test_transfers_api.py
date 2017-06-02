@@ -39,6 +39,14 @@ class TestTransfersApi(unittest.TestCase):
         """
         pass
 
+    def test_transfers_get_list(self):
+        """
+        Test case for transfers_get_list
+
+        
+        """
+        pass
+
     def test_transfers_post(self):
         """
         Test case for transfers_post

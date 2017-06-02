@@ -159,6 +159,22 @@ class TestUsersApi(unittest.TestCase):
         """
         pass
 
+    def test_users_put_legal(self):
+        """
+        Test case for users_put_legal
+
+        Update a Legal User
+        """
+        pass
+
+    def test_users_put_natural(self):
+        """
+        Test case for users_put_natural
+
+        Update a Natural User
+        """
+        pass
+
 
 if __name__ == '__main__':
     unittest.main()

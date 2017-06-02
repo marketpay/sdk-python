@@ -92,6 +92,8 @@ class WalletPost(object):
         :param owners: The owners of this WalletPost.
         :type: list[str]
         """
+        if owners is None:
+            raise ValueError("Invalid value for `owners`, must not be `None`")
 
         self._owners = owners
 
@@ -189,6 +191,9 @@ class WalletPost(object):
         """
         Returns true if both objects are equal
         """
+        if not isinstance(other, WalletPost):
+            return False
+
         return self.__dict__ == other.__dict__
 
     def __ne__(self, other):

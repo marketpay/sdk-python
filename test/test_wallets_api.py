@@ -39,6 +39,14 @@ class TestWalletsApi(unittest.TestCase):
         """
         pass
 
+    def test_wallets_get_list(self):
+        """
+        Test case for wallets_get_list
+
+        
+        """
+        pass
+
     def test_wallets_get_transaction_list(self):
         """
         Test case for wallets_get_transaction_list
