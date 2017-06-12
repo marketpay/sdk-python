@@ -19,31 +19,31 @@ import unittest
 
 import swagger_client
 from swagger_client.rest import ApiException
-from swagger_client.apis.pay_outs_api import PayOutsApi
+from swagger_client.apis.pay_ins_bankwire_api import PayInsBankwireApi
 
 
-class TestPayOutsApi(unittest.TestCase):
-    """ PayOutsApi unit test stubs """
+class TestPayInsBankwireApi(unittest.TestCase):
+    """ PayInsBankwireApi unit test stubs """
 
     def setUp(self):
-        self.api = swagger_client.apis.pay_outs_api.PayOutsApi()
+        self.api = swagger_client.apis.pay_ins_bankwire_api.PayInsBankwireApi()
 
     def tearDown(self):
         pass
 
-    def test_pay_outs_get(self):
+    def test_pay_ins_bankwire_bankwire_get_payment(self):
         """
-        Test case for pay_outs_get
+        Test case for pay_ins_bankwire_bankwire_get_payment
 
-        SwaggerDocSummary
+        
         """
         pass
 
-    def test_pay_outs_post(self):
+    def test_pay_ins_bankwire_bankwire_payment_by_direct(self):
         """
-        Test case for pay_outs_post
+        Test case for pay_ins_bankwire_bankwire_payment_by_direct
 
-        SwaggerDocSummary
+        
         """
         pass
 

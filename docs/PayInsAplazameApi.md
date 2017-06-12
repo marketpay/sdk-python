@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **pay_ins_aplazame_aplazame_post_payment_by_web**
-> PayByWebResponse pay_ins_aplazame_aplazame_post_payment_by_web(aplazame_pay_in=aplazame_pay_in)
+> AplazamePayByWebResponse pay_ins_aplazame_aplazame_post_payment_by_web(aplazame_pay_in=aplazame_pay_in)
 
 --------
 
@@ -98,7 +98,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**PayByWebResponse**](PayByWebResponse.md)
+[**AplazamePayByWebResponse**](AplazamePayByWebResponse.md)
 
 ### Authorization
 

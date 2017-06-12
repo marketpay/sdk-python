@@ -17,6 +17,7 @@ from __future__ import absolute_import
 from .models.address import Address
 from .models.aplazame_order_item import AplazameOrderItem
 from .models.aplazame_pay_by_web_post import AplazamePayByWebPost
+from .models.aplazame_pay_by_web_response import AplazamePayByWebResponse
 from .models.aplazame_pay_ins_response import AplazamePayInsResponse
 from .models.aplazame_refund_payment_post import AplazameRefundPaymentPost
 from .models.aplazame_refund_response import AplazameRefundResponse
@@ -30,6 +31,7 @@ from .models.bank_account_response_gb import BankAccountResponseGb
 from .models.bank_account_response_iban import BankAccountResponseIban
 from .models.bank_account_response_other import BankAccountResponseOther
 from .models.bank_account_response_us import BankAccountResponseUs
+from .models.bank_account_type import BankAccountType
 from .models.bank_account_us_post import BankAccountUsPost
 from .models.card_put import CardPut
 from .models.card_response import CardResponse
@@ -38,10 +40,10 @@ from .models.customer import Customer
 from .models.customer_detail import CustomerDetail
 from .models.example_user_natural_post import ExampleUserNaturalPost
 from .models.money import Money
-from .models.pay_by_web_response import PayByWebResponse
-from .models.pay_in_universal_token_request import PayInUniversalTokenRequest
-from .models.pay_out_bank_wire_post import PayOutBankWirePost
-from .models.pay_out_bank_wire_response import PayOutBankWireResponse
+from .models.pay_in_bankwire_post import PayInBankwirePost
+from .models.pay_in_bankwire_response import PayInBankwireResponse
+from .models.pay_out_bankwire_post import PayOutBankwirePost
+from .models.pay_out_bankwire_response import PayOutBankwireResponse
 from .models.payment_redsys_data import PaymentRedsysData
 from .models.payment_universal_pay_data import PaymentUniversalPayData
 from .models.preauthorization_redsys_data import PreauthorizationRedsysData
@@ -61,6 +63,7 @@ from .models.redsys_refund_response import RedsysRefundResponse
 from .models.refund_reason import RefundReason
 from .models.refund_redsys_data import RefundRedsysData
 from .models.response_list_card_response import ResponseListCardResponse
+from .models.response_list_transaction_response import ResponseListTransactionResponse
 from .models.response_list_transfer_response import ResponseListTransferResponse
 from .models.response_list_wallet_response import ResponseListWalletResponse
 from .models.seur_shipment_cancellation_response import SeurShipmentCancellationResponse
@@ -69,6 +72,7 @@ from .models.seur_shipment_response import SeurShipmentResponse
 from .models.shipment_actor import ShipmentActor
 from .models.telephone import Telephone
 from .models.telephone_seur import TelephoneSeur
+from .models.token_universal_pay_data import TokenUniversalPayData
 from .models.transaction_response import TransactionResponse
 from .models.transfer_post import TransferPost
 from .models.transfer_response import TransferResponse
@@ -78,6 +82,8 @@ from .models.universal_pay_pay_ins_response import UniversalPayPayInsResponse
 from .models.universal_pay_refund_post import UniversalPayRefundPost
 from .models.universal_pay_refund_response import UniversalPayRefundResponse
 from .models.universal_pay_token_request_post import UniversalPayTokenRequestPost
+from .models.universal_pay_tokenization_response import UniversalPayTokenizationResponse
+from .models.universal_pay_tokenize_by_web_response import UniversalPayTokenizeByWebResponse
 from .models.user_legal_post import UserLegalPost
 from .models.user_legal_put import UserLegalPut
 from .models.user_legal_response import UserLegalResponse
@@ -92,11 +98,13 @@ from .models.wallet_response import WalletResponse
 # import apis into sdk package
 from .apis.cards_api import CardsApi
 from .apis.pay_ins_aplazame_api import PayInsAplazameApi
+from .apis.pay_ins_bankwire_api import PayInsBankwireApi
 from .apis.pay_ins_redsys_api import PayInsRedsysApi
 from .apis.pay_ins_universal_pay_api import PayInsUniversalPayApi
-from .apis.pay_outs_api import PayOutsApi
+from .apis.pay_outs_bankwire_api import PayOutsBankwireApi
 from .apis.refunds_api import RefundsApi
 from .apis.shipment_seur_api import ShipmentSeurApi
+from .apis.transactions_api import TransactionsApi
 from .apis.transfers_api import TransfersApi
 from .apis.users_api import UsersApi
 from .apis.wallets_api import WalletsApi

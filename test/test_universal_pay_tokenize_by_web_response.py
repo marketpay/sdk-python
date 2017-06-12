@@ -19,11 +19,11 @@ import unittest
 
 import swagger_client
 from swagger_client.rest import ApiException
-from swagger_client.models.pay_out_bank_wire_post import PayOutBankWirePost
+from swagger_client.models.universal_pay_tokenize_by_web_response import UniversalPayTokenizeByWebResponse
 
 
-class TestPayOutBankWirePost(unittest.TestCase):
-    """ PayOutBankWirePost unit test stubs """
+class TestUniversalPayTokenizeByWebResponse(unittest.TestCase):
+    """ UniversalPayTokenizeByWebResponse unit test stubs """
 
     def setUp(self):
         pass
@@ -31,11 +31,11 @@ class TestPayOutBankWirePost(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPayOutBankWirePost(self):
+    def testUniversalPayTokenizeByWebResponse(self):
         """
-        Test PayOutBankWirePost
+        Test UniversalPayTokenizeByWebResponse
         """
-        model = swagger_client.models.pay_out_bank_wire_post.PayOutBankWirePost()
+        model = swagger_client.models.universal_pay_tokenize_by_web_response.UniversalPayTokenizeByWebResponse()
 
 
 if __name__ == '__main__':

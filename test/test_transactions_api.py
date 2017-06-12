@@ -19,23 +19,25 @@ import unittest
 
 import swagger_client
 from swagger_client.rest import ApiException
-from swagger_client.models.pay_in_universal_token_request import PayInUniversalTokenRequest
+from swagger_client.apis.transactions_api import TransactionsApi
 
 
-class TestPayInUniversalTokenRequest(unittest.TestCase):
-    """ PayInUniversalTokenRequest unit test stubs """
+class TestTransactionsApi(unittest.TestCase):
+    """ TransactionsApi unit test stubs """
 
     def setUp(self):
-        pass
+        self.api = swagger_client.apis.transactions_api.TransactionsApi()
 
     def tearDown(self):
         pass
 
-    def testPayInUniversalTokenRequest(self):
+    def test_transactions_get_list(self):
         """
-        Test PayInUniversalTokenRequest
+        Test case for transactions_get_list
+
+        
         """
-        model = swagger_client.models.pay_in_universal_token_request.PayInUniversalTokenRequest()
+        pass
 
 
 if __name__ == '__main__':

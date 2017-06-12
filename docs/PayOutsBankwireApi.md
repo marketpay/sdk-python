@@ -1,19 +1,17 @@
-# swagger_client.PayOutsApi
+# swagger_client.PayOutsBankwireApi
 
 All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**pay_outs_get**](PayOutsApi.md#pay_outs_get) | **GET** /v2.01/PayOuts/bankwire/{id} | SwaggerDocSummary
-[**pay_outs_post**](PayOutsApi.md#pay_outs_post) | **POST** /v2.01/PayOuts/bankwire | SwaggerDocSummary
+[**pay_outs_bankwire_get**](PayOutsBankwireApi.md#pay_outs_bankwire_get) | **GET** /v2.01/PayOutsBankwire/bankwire/{id} | 
+[**pay_outs_bankwire_post**](PayOutsBankwireApi.md#pay_outs_bankwire_post) | **POST** /v2.01/PayOutsBankwire/bankwire | 
 
 
-# **pay_outs_get**
-> PayOutBankWireResponse pay_outs_get(id)
+# **pay_outs_bankwire_get**
+> PayOutBankwireResponse pay_outs_bankwire_get(pay_in_id, id)
 
-SwaggerDocSummary
 
-SwaggerDocDescription
 
 ### Example 
 ```python
@@ -27,26 +25,27 @@ from pprint import pprint
 swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = swagger_client.PayOutsApi()
-id = 789 # int | SwaggerDocParameter
+api_instance = swagger_client.PayOutsBankwireApi()
+pay_in_id = 789 # int | 
+id = 'id_example' # str | 
 
 try: 
-    # SwaggerDocSummary
-    api_response = api_instance.pay_outs_get(id)
+    api_response = api_instance.pay_outs_bankwire_get(pay_in_id, id)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PayOutsApi->pay_outs_get: %s\n" % e)
+    print("Exception when calling PayOutsBankwireApi->pay_outs_bankwire_get: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **int**| SwaggerDocParameter | 
+ **pay_in_id** | **int**|  | 
+ **id** | **str**|  | 
 
 ### Return type
 
-[**PayOutBankWireResponse**](PayOutBankWireResponse.md)
+[**PayOutBankwireResponse**](PayOutBankwireResponse.md)
 
 ### Authorization
 
@@ -59,12 +58,10 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **pay_outs_post**
-> PayOutBankWireResponse pay_outs_post(request=request)
+# **pay_outs_bankwire_post**
+> PayOutBankwireResponse pay_outs_bankwire_post(bankwire_pay_in=bankwire_pay_in)
 
-SwaggerDocSummary
 
-SwaggerDocDescription
 
 ### Example 
 ```python
@@ -78,26 +75,25 @@ from pprint import pprint
 swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
-api_instance = swagger_client.PayOutsApi()
-request = swagger_client.PayOutBankWirePost() # PayOutBankWirePost | SwaggerDocParameter (optional)
+api_instance = swagger_client.PayOutsBankwireApi()
+bankwire_pay_in = swagger_client.PayOutBankwirePost() # PayOutBankwirePost |  (optional)
 
 try: 
-    # SwaggerDocSummary
-    api_response = api_instance.pay_outs_post(request=request)
+    api_response = api_instance.pay_outs_bankwire_post(bankwire_pay_in=bankwire_pay_in)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling PayOutsApi->pay_outs_post: %s\n" % e)
+    print("Exception when calling PayOutsBankwireApi->pay_outs_bankwire_post: %s\n" % e)
 ```
 
 ### Parameters
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**PayOutBankWirePost**](PayOutBankWirePost.md)| SwaggerDocParameter | [optional] 
+ **bankwire_pay_in** | [**PayOutBankwirePost**](PayOutBankwirePost.md)|  | [optional] 
 
 ### Return type
 
-[**PayOutBankWireResponse**](PayOutBankWireResponse.md)
+[**PayOutBankwireResponse**](PayOutBankwireResponse.md)
 
 ### Authorization
 

@@ -1,24 +1,24 @@
-# PayOutBankwireResponse
+# PayInBankwireResponse
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**author_id** | **str** |  | [optional] 
-**credited_user_id** | **str** |  | [optional] 
 **debited_funds** | [**Money**](Money.md) |  | [optional] 
 **credited_funds** | [**Money**](Money.md) |  | [optional] 
 **fees** | [**Money**](Money.md) |  | [optional] 
+**credited_wallet_id** | **str** |  | [optional] 
+**nature** | **str** |  | [optional] 
 **status** | **str** |  | [optional] 
+**execution_date** | **int** |  | [optional] 
 **result_code** | **str** |  | [optional] 
 **result_message** | **str** |  | [optional] 
-**execution_date** | **int** |  | [optional] 
 **type** | **str** |  | [optional] 
-**nature** | **str** |  | [optional] 
-**debited_wallet_id** | **str** |  | [optional] 
-**credited_wallet_id** | **str** |  | [optional] 
 **payment_type** | **str** |  | [optional] 
-**bank_account_id** | **str** |  | [optional] 
-**bank_wire_ref** | **str** |  | [optional] 
+**execution_type** | **str** |  | [optional] 
+**author_id** | **str** |  | [optional] 
+**credited_user_id** | **str** |  | [optional] 
+**wire_reference** | **str** |  | [optional] 
+**bank_account** | [**BankAccountType**](BankAccountType.md) |  | [optional] 
 **id** | **str** |  | [optional] 
 **creation_date** | **int** |  | [optional] 
 **tag** | **str** |  | [optional] 

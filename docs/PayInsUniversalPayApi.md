@@ -4,11 +4,60 @@ All URIs are relative to *https://localhost/*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**pay_ins_universal_pay_get_universal_pay_tokenization**](PayInsUniversalPayApi.md#pay_ins_universal_pay_get_universal_pay_tokenization) | **GET** /v2.01/PayInsUniversalPay/token/{TokenId} | 
 [**pay_ins_universal_pay_universal_pay_get_payment**](PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_get_payment) | **GET** /v2.01/PayInsUniversalPay/payments/{PayInId} | View a UniversalPay payment
 [**pay_ins_universal_pay_universal_pay_post_payment_by_web**](PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_post_payment_by_web) | **POST** /v2.01/PayInsUniversalPay/payments/web | Create a UniversalPay PayIn Request
 [**pay_ins_universal_pay_universal_pay_post_refund**](PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_post_refund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | Create a UniversalPay Payment Refund
-[**pay_ins_universal_pay_universal_pay_save_card**](PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_save_card) | **POST** /v2.01/PayInsUniversalPay/cards | 
+[**pay_ins_universal_pay_universal_pay_save_card**](PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_save_card) | **POST** /v2.01/PayInsUniversalPay/token/web | 
 
+
+# **pay_ins_universal_pay_get_universal_pay_tokenization**
+> UniversalPayTokenizationResponse pay_ins_universal_pay_get_universal_pay_tokenization(token_id)
+
+
+
+### Example 
+```python
+from __future__ import print_statement
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+
+# Configure OAuth2 access token for authorization: oauth2
+swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
+
+# create an instance of the API class
+api_instance = swagger_client.PayInsUniversalPayApi()
+token_id = 789 # int | 
+
+try: 
+    api_response = api_instance.pay_ins_universal_pay_get_universal_pay_tokenization(token_id)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling PayInsUniversalPayApi->pay_ins_universal_pay_get_universal_pay_tokenization: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **token_id** | **int**|  | 
+
+### Return type
+
+[**UniversalPayTokenizationResponse**](UniversalPayTokenizationResponse.md)
+
+### Authorization
+
+[oauth2](../README.md#oauth2)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: text/plain, application/json, text/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **pay_ins_universal_pay_universal_pay_get_payment**
 > UniversalPayPayInsResponse pay_ins_universal_pay_universal_pay_get_payment(pay_in_id)
@@ -166,7 +215,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **pay_ins_universal_pay_universal_pay_save_card**
-> UniversalPayPayByWebResponse pay_ins_universal_pay_universal_pay_save_card(universal_pay_save_card=universal_pay_save_card)
+> UniversalPayTokenizeByWebResponse pay_ins_universal_pay_universal_pay_save_card(universal_pay_save_card=universal_pay_save_card)
 
 
 
@@ -200,7 +249,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**UniversalPayPayByWebResponse**](UniversalPayPayByWebResponse.md)
+[**UniversalPayTokenizeByWebResponse**](UniversalPayTokenizeByWebResponse.md)
 
 ### Authorization
 

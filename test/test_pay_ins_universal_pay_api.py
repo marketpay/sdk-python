@@ -31,6 +31,14 @@ class TestPayInsUniversalPayApi(unittest.TestCase):
     def tearDown(self):
         pass
 
+    def test_pay_ins_universal_pay_get_universal_pay_tokenization(self):
+        """
+        Test case for pay_ins_universal_pay_get_universal_pay_tokenization
+
+        
+        """
+        pass
+
     def test_pay_ins_universal_pay_universal_pay_get_payment(self):
         """
         Test case for pay_ins_universal_pay_universal_pay_get_payment

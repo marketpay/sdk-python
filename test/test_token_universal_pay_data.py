@@ -19,11 +19,11 @@ import unittest
 
 import swagger_client
 from swagger_client.rest import ApiException
-from swagger_client.models.pay_by_web_response import PayByWebResponse
+from swagger_client.models.token_universal_pay_data import TokenUniversalPayData
 
 
-class TestPayByWebResponse(unittest.TestCase):
-    """ PayByWebResponse unit test stubs """
+class TestTokenUniversalPayData(unittest.TestCase):
+    """ TokenUniversalPayData unit test stubs """
 
     def setUp(self):
         pass
@@ -31,11 +31,11 @@ class TestPayByWebResponse(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def testPayByWebResponse(self):
+    def testTokenUniversalPayData(self):
         """
-        Test PayByWebResponse
+        Test TokenUniversalPayData
         """
-        model = swagger_client.models.pay_by_web_response.PayByWebResponse()
+        model = swagger_client.models.token_universal_pay_data.TokenUniversalPayData()
 
 
 if __name__ == '__main__':

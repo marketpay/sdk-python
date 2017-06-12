@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **secure_mode** | **str** |  | [optional] 
 **success_url** | **str** | Url to redirect the browser in case the payment is completed successfully | [optional] 
 **cancel_url** | **str** | Url to redirect the browser in case the payment is not completed successfully | [optional] 
-**auto_return** | **bool** | Defaults to false (show thank you page) Forced to true for iframe | [optional] 
 **language** | **str** | Valid values are ES, EN, FR | [optional] 
 **customer** | [**CustomerDetail**](CustomerDetail.md) |  | 
 

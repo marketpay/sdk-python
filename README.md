@@ -78,6 +78,8 @@ Class | Method | HTTP request | Description
 *PayInsAplazameApi* | [**pay_ins_aplazame_aplazame_get_payment**](docs/PayInsAplazameApi.md#pay_ins_aplazame_aplazame_get_payment) | **GET** /v2.01/PayInsAplazame/payments/{PayInId} | -------
 *PayInsAplazameApi* | [**pay_ins_aplazame_aplazame_post_payment_by_web**](docs/PayInsAplazameApi.md#pay_ins_aplazame_aplazame_post_payment_by_web) | **POST** /v2.01/PayInsAplazame/payments/web | --------
 *PayInsAplazameApi* | [**pay_ins_aplazame_refund**](docs/PayInsAplazameApi.md#pay_ins_aplazame_refund) | **POST** /v2.01/PayInsAplazame/payments/{PayInId}/refunds | 
+*PayInsBankwireApi* | [**pay_ins_bankwire_bankwire_get_payment**](docs/PayInsBankwireApi.md#pay_ins_bankwire_bankwire_get_payment) | **GET** /v2.01/PayInsBankwire/payments/{PayInId} | 
+*PayInsBankwireApi* | [**pay_ins_bankwire_bankwire_payment_by_direct**](docs/PayInsBankwireApi.md#pay_ins_bankwire_bankwire_payment_by_direct) | **POST** /v2.01/PayInsBankwire/payments/direct | 
 *PayInsRedsysApi* | [**pay_ins_redsys_redsys_get_payment**](docs/PayInsRedsysApi.md#pay_ins_redsys_redsys_get_payment) | **GET** /v2.01/PayInsRedsys/payments/{PayInId} | View a Redsys payment
 *PayInsRedsysApi* | [**pay_ins_redsys_redsys_get_preauthorization**](docs/PayInsRedsysApi.md#pay_ins_redsys_redsys_get_preauthorization) | **GET** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId} | View a Redsys Preauthorization
 *PayInsRedsysApi* | [**pay_ins_redsys_redsys_post_payment_by_web**](docs/PayInsRedsysApi.md#pay_ins_redsys_redsys_post_payment_by_web) | **POST** /v2.01/PayInsRedsys/payments/web | Create a Redsys PayIn Request
@@ -85,16 +87,18 @@ Class | Method | HTTP request | Description
 *PayInsRedsysApi* | [**pay_ins_redsys_redsys_post_preauthorization_cancellation**](docs/PayInsRedsysApi.md#pay_ins_redsys_redsys_post_preauthorization_cancellation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation | Cancels a Preauthorization
 *PayInsRedsysApi* | [**pay_ins_redsys_redsys_post_preauthorization_confirmation**](docs/PayInsRedsysApi.md#pay_ins_redsys_redsys_post_preauthorization_confirmation) | **POST** /v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation | Confirms a Preauthorization
 *PayInsRedsysApi* | [**pay_ins_redsys_redsys_post_refund**](docs/PayInsRedsysApi.md#pay_ins_redsys_redsys_post_refund) | **POST** /v2.01/PayInsRedsys/payments/{PayInId}/refunds | Create a Redsys Payment Refund
+*PayInsUniversalPayApi* | [**pay_ins_universal_pay_get_universal_pay_tokenization**](docs/PayInsUniversalPayApi.md#pay_ins_universal_pay_get_universal_pay_tokenization) | **GET** /v2.01/PayInsUniversalPay/token/{TokenId} | 
 *PayInsUniversalPayApi* | [**pay_ins_universal_pay_universal_pay_get_payment**](docs/PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_get_payment) | **GET** /v2.01/PayInsUniversalPay/payments/{PayInId} | View a UniversalPay payment
 *PayInsUniversalPayApi* | [**pay_ins_universal_pay_universal_pay_post_payment_by_web**](docs/PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_post_payment_by_web) | **POST** /v2.01/PayInsUniversalPay/payments/web | Create a UniversalPay PayIn Request
 *PayInsUniversalPayApi* | [**pay_ins_universal_pay_universal_pay_post_refund**](docs/PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_post_refund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | Create a UniversalPay Payment Refund
-*PayInsUniversalPayApi* | [**pay_ins_universal_pay_universal_pay_save_card**](docs/PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_save_card) | **POST** /v2.01/PayInsUniversalPay/cards | 
-*PayOutsApi* | [**pay_outs_get**](docs/PayOutsApi.md#pay_outs_get) | **GET** /v2.01/PayOuts/bankwire/{id} | SwaggerDocSummary
-*PayOutsApi* | [**pay_outs_post**](docs/PayOutsApi.md#pay_outs_post) | **POST** /v2.01/PayOuts/bankwire | SwaggerDocSummary
+*PayInsUniversalPayApi* | [**pay_ins_universal_pay_universal_pay_save_card**](docs/PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_save_card) | **POST** /v2.01/PayInsUniversalPay/token/web | 
+*PayOutsBankwireApi* | [**pay_outs_bankwire_get**](docs/PayOutsBankwireApi.md#pay_outs_bankwire_get) | **GET** /v2.01/PayOutsBankwire/bankwire/{id} | 
+*PayOutsBankwireApi* | [**pay_outs_bankwire_post**](docs/PayOutsBankwireApi.md#pay_outs_bankwire_post) | **POST** /v2.01/PayOutsBankwire/bankwire | 
 *RefundsApi* | [**refunds_refund_get**](docs/RefundsApi.md#refunds_refund_get) | **GET** /v2.01/Refunds/{RefundId} | View a Refund
 *ShipmentSeurApi* | [**shipment_seur_seur_cancel_shipment**](docs/ShipmentSeurApi.md#shipment_seur_seur_cancel_shipment) | **POST** /v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation | Cancels a shipment
 *ShipmentSeurApi* | [**shipment_seur_seur_create_shipment**](docs/ShipmentSeurApi.md#shipment_seur_seur_create_shipment) | **POST** /v2.01/ShipmentSeur/shipments | Creates a shipment
 *ShipmentSeurApi* | [**shipment_seur_seur_get_shipment**](docs/ShipmentSeurApi.md#shipment_seur_seur_get_shipment) | **GET** /v2.01/ShipmentSeur/shipments/{ShipmentId} | Cancels a shipment
+*TransactionsApi* | [**transactions_get_list**](docs/TransactionsApi.md#transactions_get_list) | **GET** /v2.01/Transactions | 
 *TransfersApi* | [**transfers_get**](docs/TransfersApi.md#transfers_get) | **GET** /v2.01/Transfers/{TransferId} | View a Transfer
 *TransfersApi* | [**transfers_get_list**](docs/TransfersApi.md#transfers_get_list) | **GET** /v2.01/Transfers | 
 *TransfersApi* | [**transfers_post**](docs/TransfersApi.md#transfers_post) | **POST** /v2.01/Transfers | Create a Transfer
@@ -128,6 +132,7 @@ Class | Method | HTTP request | Description
  - [Address](docs/Address.md)
  - [AplazameOrderItem](docs/AplazameOrderItem.md)
  - [AplazamePayByWebPost](docs/AplazamePayByWebPost.md)
+ - [AplazamePayByWebResponse](docs/AplazamePayByWebResponse.md)
  - [AplazamePayInsResponse](docs/AplazamePayInsResponse.md)
  - [AplazameRefundPaymentPost](docs/AplazameRefundPaymentPost.md)
  - [AplazameRefundResponse](docs/AplazameRefundResponse.md)
@@ -141,6 +146,7 @@ Class | Method | HTTP request | Description
  - [BankAccountResponseIban](docs/BankAccountResponseIban.md)
  - [BankAccountResponseOther](docs/BankAccountResponseOther.md)
  - [BankAccountResponseUs](docs/BankAccountResponseUs.md)
+ - [BankAccountType](docs/BankAccountType.md)
  - [BankAccountUsPost](docs/BankAccountUsPost.md)
  - [CardPut](docs/CardPut.md)
  - [CardResponse](docs/CardResponse.md)
@@ -149,10 +155,10 @@ Class | Method | HTTP request | Description
  - [CustomerDetail](docs/CustomerDetail.md)
  - [ExampleUserNaturalPost](docs/ExampleUserNaturalPost.md)
  - [Money](docs/Money.md)
- - [PayByWebResponse](docs/PayByWebResponse.md)
- - [PayInUniversalTokenRequest](docs/PayInUniversalTokenRequest.md)
- - [PayOutBankWirePost](docs/PayOutBankWirePost.md)
- - [PayOutBankWireResponse](docs/PayOutBankWireResponse.md)
+ - [PayInBankwirePost](docs/PayInBankwirePost.md)
+ - [PayInBankwireResponse](docs/PayInBankwireResponse.md)
+ - [PayOutBankwirePost](docs/PayOutBankwirePost.md)
+ - [PayOutBankwireResponse](docs/PayOutBankwireResponse.md)
  - [PaymentRedsysData](docs/PaymentRedsysData.md)
  - [PaymentUniversalPayData](docs/PaymentUniversalPayData.md)
  - [PreauthorizationRedsysData](docs/PreauthorizationRedsysData.md)
@@ -172,6 +178,7 @@ Class | Method | HTTP request | Description
  - [RefundReason](docs/RefundReason.md)
  - [RefundRedsysData](docs/RefundRedsysData.md)
  - [ResponseListCardResponse](docs/ResponseListCardResponse.md)
+ - [ResponseListTransactionResponse](docs/ResponseListTransactionResponse.md)
  - [ResponseListTransferResponse](docs/ResponseListTransferResponse.md)
  - [ResponseListWalletResponse](docs/ResponseListWalletResponse.md)
  - [SeurShipmentCancellationResponse](docs/SeurShipmentCancellationResponse.md)
@@ -180,6 +187,7 @@ Class | Method | HTTP request | Description
  - [ShipmentActor](docs/ShipmentActor.md)
  - [Telephone](docs/Telephone.md)
  - [TelephoneSeur](docs/TelephoneSeur.md)
+ - [TokenUniversalPayData](docs/TokenUniversalPayData.md)
  - [TransactionResponse](docs/TransactionResponse.md)
  - [TransferPost](docs/TransferPost.md)
  - [TransferResponse](docs/TransferResponse.md)
@@ -189,6 +197,8 @@ Class | Method | HTTP request | Description
  - [UniversalPayRefundPost](docs/UniversalPayRefundPost.md)
  - [UniversalPayRefundResponse](docs/UniversalPayRefundResponse.md)
  - [UniversalPayTokenRequestPost](docs/UniversalPayTokenRequestPost.md)
+ - [UniversalPayTokenizationResponse](docs/UniversalPayTokenizationResponse.md)
+ - [UniversalPayTokenizeByWebResponse](docs/UniversalPayTokenizeByWebResponse.md)
  - [UserLegalPost](docs/UserLegalPost.md)
  - [UserLegalPut](docs/UserLegalPut.md)
  - [UserLegalResponse](docs/UserLegalResponse.md)

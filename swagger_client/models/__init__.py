@@ -17,6 +17,7 @@ from __future__ import absolute_import
 from .address import Address
 from .aplazame_order_item import AplazameOrderItem
 from .aplazame_pay_by_web_post import AplazamePayByWebPost
+from .aplazame_pay_by_web_response import AplazamePayByWebResponse
 from .aplazame_pay_ins_response import AplazamePayInsResponse
 from .aplazame_refund_payment_post import AplazameRefundPaymentPost
 from .aplazame_refund_response import AplazameRefundResponse
@@ -30,6 +31,7 @@ from .bank_account_response_gb import BankAccountResponseGb
 from .bank_account_response_iban import BankAccountResponseIban
 from .bank_account_response_other import BankAccountResponseOther
 from .bank_account_response_us import BankAccountResponseUs
+from .bank_account_type import BankAccountType
 from .bank_account_us_post import BankAccountUsPost
 from .card_put import CardPut
 from .card_response import CardResponse
@@ -38,10 +40,10 @@ from .customer import Customer
 from .customer_detail import CustomerDetail
 from .example_user_natural_post import ExampleUserNaturalPost
 from .money import Money
-from .pay_by_web_response import PayByWebResponse
-from .pay_in_universal_token_request import PayInUniversalTokenRequest
-from .pay_out_bank_wire_post import PayOutBankWirePost
-from .pay_out_bank_wire_response import PayOutBankWireResponse
+from .pay_in_bankwire_post import PayInBankwirePost
+from .pay_in_bankwire_response import PayInBankwireResponse
+from .pay_out_bankwire_post import PayOutBankwirePost
+from .pay_out_bankwire_response import PayOutBankwireResponse
 from .payment_redsys_data import PaymentRedsysData
 from .payment_universal_pay_data import PaymentUniversalPayData
 from .preauthorization_redsys_data import PreauthorizationRedsysData
@@ -61,6 +63,7 @@ from .redsys_refund_response import RedsysRefundResponse
 from .refund_reason import RefundReason
 from .refund_redsys_data import RefundRedsysData
 from .response_list_card_response import ResponseListCardResponse
+from .response_list_transaction_response import ResponseListTransactionResponse
 from .response_list_transfer_response import ResponseListTransferResponse
 from .response_list_wallet_response import ResponseListWalletResponse
 from .seur_shipment_cancellation_response import SeurShipmentCancellationResponse
@@ -69,6 +72,7 @@ from .seur_shipment_response import SeurShipmentResponse
 from .shipment_actor import ShipmentActor
 from .telephone import Telephone
 from .telephone_seur import TelephoneSeur
+from .token_universal_pay_data import TokenUniversalPayData
 from .transaction_response import TransactionResponse
 from .transfer_post import TransferPost
 from .transfer_response import TransferResponse
@@ -78,6 +82,8 @@ from .universal_pay_pay_ins_response import UniversalPayPayInsResponse
 from .universal_pay_refund_post import UniversalPayRefundPost
 from .universal_pay_refund_response import UniversalPayRefundResponse
 from .universal_pay_token_request_post import UniversalPayTokenRequestPost
+from .universal_pay_tokenization_response import UniversalPayTokenizationResponse
+from .universal_pay_tokenize_by_web_response import UniversalPayTokenizeByWebResponse
 from .user_legal_post import UserLegalPost
 from .user_legal_put import UserLegalPut
 from .user_legal_response import UserLegalResponse

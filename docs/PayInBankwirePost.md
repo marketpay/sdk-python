@@ -1,12 +1,12 @@
-# CustomerDetail
+# PayInBankwirePost
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**first_name** | **str** |  | [optional] 
-**last_name** | **str** |  | [optional] 
-**telephone** | [**Telephone**](Telephone.md) |  | [optional] 
-**address** | [**Address**](Address.md) |  | 
+**tag** | **str** |  | [optional] 
+**credited_wallet_id** | **str** |  | 
+**debited_funds** | [**Money**](Money.md) |  | 
+**fees** | [**Money**](Money.md) |  | 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
