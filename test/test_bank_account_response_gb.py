@@ -35,7 +35,9 @@ class TestBankAccountResponseGb(unittest.TestCase):
         """
         Test BankAccountResponseGb
         """
-        model = swagger_client.models.bank_account_response_gb.BankAccountResponseGb()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.bank_account_response_gb.BankAccountResponseGb()
+        pass
 
 
 if __name__ == '__main__':

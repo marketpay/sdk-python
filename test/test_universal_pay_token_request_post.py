@@ -35,7 +35,9 @@ class TestUniversalPayTokenRequestPost(unittest.TestCase):
         """
         Test UniversalPayTokenRequestPost
         """
-        model = swagger_client.models.universal_pay_token_request_post.UniversalPayTokenRequestPost()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.universal_pay_token_request_post.UniversalPayTokenRequestPost()
+        pass
 
 
 if __name__ == '__main__':

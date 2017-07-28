@@ -1,10 +1,10 @@
 # swagger_client.PayInsUniversalPayApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**pay_ins_universal_pay_get_universal_pay_tokenization**](PayInsUniversalPayApi.md#pay_ins_universal_pay_get_universal_pay_tokenization) | **GET** /v2.01/PayInsUniversalPay/token/{TokenId} | 
+[**pay_ins_universal_pay_get_universal_pay_tokenization**](PayInsUniversalPayApi.md#pay_ins_universal_pay_get_universal_pay_tokenization) | **GET** /v2.01/PayInsUniversalPay/token/{TokenId} | View a UniversalPay card tokenization status
 [**pay_ins_universal_pay_universal_pay_get_payment**](PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_get_payment) | **GET** /v2.01/PayInsUniversalPay/payments/{PayInId} | View a UniversalPay payment
 [**pay_ins_universal_pay_universal_pay_post_payment_by_web**](PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_post_payment_by_web) | **POST** /v2.01/PayInsUniversalPay/payments/web | Create a UniversalPay PayIn Request
 [**pay_ins_universal_pay_universal_pay_post_refund**](PayInsUniversalPayApi.md#pay_ins_universal_pay_universal_pay_post_refund) | **POST** /v2.01/PayInsUniversalPay/payments/{PayInId}/refunds | Create a UniversalPay Payment Refund
@@ -14,11 +14,13 @@ Method | HTTP request | Description
 # **pay_ins_universal_pay_get_universal_pay_tokenization**
 > UniversalPayTokenizationResponse pay_ins_universal_pay_get_universal_pay_tokenization(token_id)
 
+View a UniversalPay card tokenization status
+
 
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -29,9 +31,10 @@ swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = swagger_client.PayInsUniversalPayApi()
-token_id = 789 # int | 
+token_id = 789 # int | The Id of a tokenization
 
 try: 
+    # View a UniversalPay card tokenization status
     api_response = api_instance.pay_ins_universal_pay_get_universal_pay_tokenization(token_id)
     pprint(api_response)
 except ApiException as e:
@@ -42,7 +45,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **token_id** | **int**|  | 
+ **token_id** | **int**| The Id of a tokenization | 
 
 ### Return type
 
@@ -68,7 +71,7 @@ View a UniversalPay payment
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -115,11 +118,11 @@ Name | Type | Description  | Notes
 
 Create a UniversalPay PayIn Request
 
-Prepares a payment on UniversalPay. The data returned is used to show the UniversalPay interface to the user.  Once the payment is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\" -H \"Cache-Control: no-cache\" -H \"Postman-Token: c313f10b-0de1-227e-53d2-f721f25cd79d\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
+Prepares a payment on UniversalPay. The data returned is used to show the UniversalPay interface to the user.  Once the payment is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\" -H \"Cache-Control: no-cache\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -170,7 +173,7 @@ A PayIn Refund is a request to reimburse a user on their payment card. The money
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -221,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException

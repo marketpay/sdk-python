@@ -35,7 +35,9 @@ class TestSeurShipmentPost(unittest.TestCase):
         """
         Test SeurShipmentPost
         """
-        model = swagger_client.models.seur_shipment_post.SeurShipmentPost()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.seur_shipment_post.SeurShipmentPost()
+        pass
 
 
 if __name__ == '__main__':

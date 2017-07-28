@@ -35,7 +35,7 @@ class TestPayInsUniversalPayApi(unittest.TestCase):
         """
         Test case for pay_ins_universal_pay_get_universal_pay_tokenization
 
-        
+        View a UniversalPay card tokenization status
         """
         pass
 

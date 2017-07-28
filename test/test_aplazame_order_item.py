@@ -35,7 +35,9 @@ class TestAplazameOrderItem(unittest.TestCase):
         """
         Test AplazameOrderItem
         """
-        model = swagger_client.models.aplazame_order_item.AplazameOrderItem()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.aplazame_order_item.AplazameOrderItem()
+        pass
 
 
 if __name__ == '__main__':

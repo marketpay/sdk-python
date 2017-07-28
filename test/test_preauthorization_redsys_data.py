@@ -35,7 +35,9 @@ class TestPreauthorizationRedsysData(unittest.TestCase):
         """
         Test PreauthorizationRedsysData
         """
-        model = swagger_client.models.preauthorization_redsys_data.PreauthorizationRedsysData()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.preauthorization_redsys_data.PreauthorizationRedsysData()
+        pass
 
 
 if __name__ == '__main__':

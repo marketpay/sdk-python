@@ -35,7 +35,9 @@ class TestResponseListTransferResponse(unittest.TestCase):
         """
         Test ResponseListTransferResponse
         """
-        model = swagger_client.models.response_list_transfer_response.ResponseListTransferResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.response_list_transfer_response.ResponseListTransferResponse()
+        pass
 
 
 if __name__ == '__main__':

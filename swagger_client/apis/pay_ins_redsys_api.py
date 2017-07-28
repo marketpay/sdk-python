@@ -108,12 +108,11 @@ class PayInsRedsysApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsRedsys/payments/{PayInId}'.replace('{format}', 'json')
         path_params = {}
         if 'pay_in_id' in params:
             path_params['PayInId'] = params['pay_in_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -128,7 +127,7 @@ class PayInsRedsysApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/PayInsRedsys/payments/{PayInId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -211,12 +210,11 @@ class PayInsRedsysApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}'.replace('{format}', 'json')
         path_params = {}
         if 'preauthorization_id' in params:
             path_params['PreauthorizationId'] = params['preauthorization_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -231,7 +229,7 @@ class PayInsRedsysApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -260,6 +258,7 @@ class PayInsRedsysApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str x_webhook:
         :param RedsysPayByWebPost redsys_pay_in: Redsys PayIn Request Object params
         :return: RedsysPayByWebResponse
                  If the method is called asynchronously,
@@ -286,13 +285,14 @@ class PayInsRedsysApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
+        :param str x_webhook:
         :param RedsysPayByWebPost redsys_pay_in: Redsys PayIn Request Object params
         :return: RedsysPayByWebResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['redsys_pay_in']
+        all_params = ['x_webhook', 'redsys_pay_in']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -311,12 +311,13 @@ class PayInsRedsysApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsRedsys/payments/web'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
+        if 'x_webhook' in params:
+            header_params['X-Webhook'] = params['x_webhook']
 
         form_params = []
         local_var_files = {}
@@ -335,7 +336,7 @@ class PayInsRedsysApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/PayInsRedsys/payments/web', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -415,10 +416,9 @@ class PayInsRedsysApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsRedsys/preauthorizations/web'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -439,7 +439,7 @@ class PayInsRedsysApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/PayInsRedsys/preauthorizations/web', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -468,7 +468,7 @@ class PayInsRedsysApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param int preauthorization_id: The Id of a Redsys PreauthorizationCancellation (required)
+        :param int preauthorization_id: The Id of a Redsys Preauthorization (required)
         :param RedsysPreauthorizationCancellationPost redsys_preauthorization_cancellation: PreauthorizationCancellation Object params
         :return: RedsysPreauthorizationCancellationResponse
                  If the method is called asynchronously,
@@ -495,7 +495,7 @@ class PayInsRedsysApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param int preauthorization_id: The Id of a Redsys PreauthorizationCancellation (required)
+        :param int preauthorization_id: The Id of a Redsys Preauthorization (required)
         :param RedsysPreauthorizationCancellationPost redsys_preauthorization_cancellation: PreauthorizationCancellation Object params
         :return: RedsysPreauthorizationCancellationResponse
                  If the method is called asynchronously,
@@ -524,12 +524,11 @@ class PayInsRedsysApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation'.replace('{format}', 'json')
         path_params = {}
         if 'preauthorization_id' in params:
             path_params['PreauthorizationId'] = params['preauthorization_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -550,7 +549,7 @@ class PayInsRedsysApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/cancellation', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -579,7 +578,7 @@ class PayInsRedsysApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param int preauthorization_id: The Id of a Redsys PreauthorizationConfirmation (required)
+        :param int preauthorization_id: The Id of a Redsys Preauthorization (required)
         :param RedsysPreauthorizationConfirmationPost redsys_preauthorization_confirmation: PreauthorizationConfirmation Object params
         :return: RedsysPreauthorizationConfirmationResponse
                  If the method is called asynchronously,
@@ -606,7 +605,7 @@ class PayInsRedsysApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param int preauthorization_id: The Id of a Redsys PreauthorizationConfirmation (required)
+        :param int preauthorization_id: The Id of a Redsys Preauthorization (required)
         :param RedsysPreauthorizationConfirmationPost redsys_preauthorization_confirmation: PreauthorizationConfirmation Object params
         :return: RedsysPreauthorizationConfirmationResponse
                  If the method is called asynchronously,
@@ -635,12 +634,11 @@ class PayInsRedsysApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation'.replace('{format}', 'json')
         path_params = {}
         if 'preauthorization_id' in params:
             path_params['PreauthorizationId'] = params['preauthorization_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -661,7 +659,7 @@ class PayInsRedsysApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/PayInsRedsys/preauthorizations/{PreauthorizationId}/confirmation', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -746,12 +744,11 @@ class PayInsRedsysApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsRedsys/payments/{PayInId}/refunds'.replace('{format}', 'json')
         path_params = {}
         if 'pay_in_id' in params:
             path_params['PayInId'] = params['pay_in_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -772,7 +769,7 @@ class PayInsRedsysApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/PayInsRedsys/payments/{PayInId}/refunds', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

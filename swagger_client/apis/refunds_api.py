@@ -108,12 +108,11 @@ class RefundsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Refunds/{RefundId}'.replace('{format}', 'json')
         path_params = {}
         if 'refund_id' in params:
             path_params['RefundId'] = params['refund_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -128,7 +127,7 @@ class RefundsApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Refunds/{RefundId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

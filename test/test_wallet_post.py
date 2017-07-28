@@ -35,7 +35,9 @@ class TestWalletPost(unittest.TestCase):
         """
         Test WalletPost
         """
-        model = swagger_client.models.wallet_post.WalletPost()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.wallet_post.WalletPost()
+        pass
 
 
 if __name__ == '__main__':

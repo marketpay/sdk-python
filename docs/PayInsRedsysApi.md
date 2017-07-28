@@ -1,6 +1,6 @@
 # swagger_client.PayInsRedsysApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,7 +22,7 @@ View a Redsys payment
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -73,7 +73,7 @@ View a Redsys Preauthorization
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -116,7 +116,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **pay_ins_redsys_redsys_post_payment_by_web**
-> RedsysPayByWebResponse pay_ins_redsys_redsys_post_payment_by_web(redsys_pay_in=redsys_pay_in)
+> RedsysPayByWebResponse pay_ins_redsys_redsys_post_payment_by_web(x_webhook=x_webhook, redsys_pay_in=redsys_pay_in)
 
 Create a Redsys PayIn Request
 
@@ -124,7 +124,7 @@ Prepares a payment on Redsys. The data returned is used to show the Redsys inter
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -135,11 +135,12 @@ swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = swagger_client.PayInsRedsysApi()
+x_webhook = 'x_webhook_example' # str |  (optional)
 redsys_pay_in = swagger_client.RedsysPayByWebPost() # RedsysPayByWebPost | Redsys PayIn Request Object params (optional)
 
 try: 
     # Create a Redsys PayIn Request
-    api_response = api_instance.pay_ins_redsys_redsys_post_payment_by_web(redsys_pay_in=redsys_pay_in)
+    api_response = api_instance.pay_ins_redsys_redsys_post_payment_by_web(x_webhook=x_webhook, redsys_pay_in=redsys_pay_in)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling PayInsRedsysApi->pay_ins_redsys_redsys_post_payment_by_web: %s\n" % e)
@@ -149,6 +150,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **x_webhook** | **str**|  | [optional] 
  **redsys_pay_in** | [**RedsysPayByWebPost**](RedsysPayByWebPost.md)| Redsys PayIn Request Object params | [optional] 
 
 ### Return type
@@ -175,7 +177,7 @@ Prepares a preauthorization on Redsys. The data returned is used to show the Red
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -226,7 +228,7 @@ Cancels a Preauthorization
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -237,7 +239,7 @@ swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = swagger_client.PayInsRedsysApi()
-preauthorization_id = 789 # int | The Id of a Redsys PreauthorizationCancellation
+preauthorization_id = 789 # int | The Id of a Redsys Preauthorization
 redsys_preauthorization_cancellation = swagger_client.RedsysPreauthorizationCancellationPost() # RedsysPreauthorizationCancellationPost | PreauthorizationCancellation Object params (optional)
 
 try: 
@@ -252,7 +254,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **preauthorization_id** | **int**| The Id of a Redsys PreauthorizationCancellation | 
+ **preauthorization_id** | **int**| The Id of a Redsys Preauthorization | 
  **redsys_preauthorization_cancellation** | [**RedsysPreauthorizationCancellationPost**](RedsysPreauthorizationCancellationPost.md)| PreauthorizationCancellation Object params | [optional] 
 
 ### Return type
@@ -279,7 +281,7 @@ Confirms a Preauthorization
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -290,7 +292,7 @@ swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = swagger_client.PayInsRedsysApi()
-preauthorization_id = 789 # int | The Id of a Redsys PreauthorizationConfirmation
+preauthorization_id = 789 # int | The Id of a Redsys Preauthorization
 redsys_preauthorization_confirmation = swagger_client.RedsysPreauthorizationConfirmationPost() # RedsysPreauthorizationConfirmationPost | PreauthorizationConfirmation Object params (optional)
 
 try: 
@@ -305,7 +307,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **preauthorization_id** | **int**| The Id of a Redsys PreauthorizationConfirmation | 
+ **preauthorization_id** | **int**| The Id of a Redsys Preauthorization | 
  **redsys_preauthorization_confirmation** | [**RedsysPreauthorizationConfirmationPost**](RedsysPreauthorizationConfirmationPost.md)| PreauthorizationConfirmation Object params | [optional] 
 
 ### Return type
@@ -332,7 +334,7 @@ A PayIn Refund is a request to reimburse a user on their payment card. The money
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException

@@ -10,6 +10,7 @@ Name | Type | Description | Notes
 **sender_user_id** | **str** | The ID of the user sending the package | [optional] 
 **receiver_user_id** | **str** | The ID of the user sending the package | [optional] 
 **product** | [**Product**](Product.md) |  | [optional] 
+**observations** | **str** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

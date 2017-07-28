@@ -42,6 +42,8 @@ class PayInsBankwireApi(object):
 
     def pay_ins_bankwire_bankwire_get_payment(self, pay_in_id, **kwargs):
         """
+        View a Bankwire PayIn
+        View a Bankwire PayIn
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -52,7 +54,7 @@ class PayInsBankwireApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param int pay_in_id: (required)
+        :param int pay_in_id: The Id of a payment (required)
         :return: PayInBankwireResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -66,6 +68,8 @@ class PayInsBankwireApi(object):
 
     def pay_ins_bankwire_bankwire_get_payment_with_http_info(self, pay_in_id, **kwargs):
         """
+        View a Bankwire PayIn
+        View a Bankwire PayIn
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -76,7 +80,7 @@ class PayInsBankwireApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param int pay_in_id: (required)
+        :param int pay_in_id: The Id of a payment (required)
         :return: PayInBankwireResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -104,12 +108,11 @@ class PayInsBankwireApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsBankwire/payments/{PayInId}'.replace('{format}', 'json')
         path_params = {}
         if 'pay_in_id' in params:
             path_params['PayInId'] = params['pay_in_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -124,7 +127,7 @@ class PayInsBankwireApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/PayInsBankwire/payments/{PayInId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -141,6 +144,8 @@ class PayInsBankwireApi(object):
 
     def pay_ins_bankwire_bankwire_payment_by_direct(self, **kwargs):
         """
+        Create a Bankwire PayIn
+        Create a Bankwire PayIn.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -151,7 +156,7 @@ class PayInsBankwireApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param PayInBankwirePost bankwire_pay_in:
+        :param PayInBankwirePost bankwire_pay_in: Redsys PayIn Request Object params
         :return: PayInBankwireResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -165,6 +170,8 @@ class PayInsBankwireApi(object):
 
     def pay_ins_bankwire_bankwire_payment_by_direct_with_http_info(self, **kwargs):
         """
+        Create a Bankwire PayIn
+        Create a Bankwire PayIn.
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -175,7 +182,7 @@ class PayInsBankwireApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param PayInBankwirePost bankwire_pay_in:
+        :param PayInBankwirePost bankwire_pay_in: Redsys PayIn Request Object params
         :return: PayInBankwireResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -200,10 +207,9 @@ class PayInsBankwireApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsBankwire/payments/direct'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -224,7 +230,7 @@ class PayInsBankwireApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/PayInsBankwire/payments/direct', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

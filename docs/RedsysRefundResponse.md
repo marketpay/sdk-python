@@ -20,9 +20,9 @@ Name | Type | Description | Notes
 **initial_transaction_type** | **str** | The initial transaction type | [optional] 
 **refund_reason** | [**RefundReason**](RefundReason.md) | Contains info about the reason for refund | [optional] 
 **provider** | [**RefundRedsysData**](RefundRedsysData.md) | Redsys related data | [optional] 
-**id** | **str** |  | [optional] 
-**creation_date** | **int** |  | [optional] 
-**tag** | **str** |  | [optional] 
+**id** | **str** | The item&#39;s ID | [optional] 
+**creation_date** | **int** | When the item was created | [optional] 
+**tag** | **str** | Custom data that you can add to this item | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -35,7 +35,9 @@ class TestBankAccountIbanPost(unittest.TestCase):
         """
         Test BankAccountIbanPost
         """
-        model = swagger_client.models.bank_account_iban_post.BankAccountIbanPost()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.bank_account_iban_post.BankAccountIbanPost()
+        pass
 
 
 if __name__ == '__main__':

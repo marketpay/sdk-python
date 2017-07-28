@@ -35,7 +35,9 @@ class TestUserNaturalPut(unittest.TestCase):
         """
         Test UserNaturalPut
         """
-        model = swagger_client.models.user_natural_put.UserNaturalPut()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.user_natural_put.UserNaturalPut()
+        pass
 
 
 if __name__ == '__main__':

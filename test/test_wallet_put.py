@@ -35,7 +35,9 @@ class TestWalletPut(unittest.TestCase):
         """
         Test WalletPut
         """
-        model = swagger_client.models.wallet_put.WalletPut()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.wallet_put.WalletPut()
+        pass
 
 
 if __name__ == '__main__':

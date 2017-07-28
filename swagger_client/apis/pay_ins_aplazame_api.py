@@ -108,12 +108,11 @@ class PayInsAplazameApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsAplazame/payments/{PayInId}'.replace('{format}', 'json')
         path_params = {}
         if 'pay_in_id' in params:
             path_params['PayInId'] = params['pay_in_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -128,7 +127,7 @@ class PayInsAplazameApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/PayInsAplazame/payments/{PayInId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -208,10 +207,9 @@ class PayInsAplazameApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsAplazame/payments/web'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -232,7 +230,7 @@ class PayInsAplazameApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/PayInsAplazame/payments/web', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -313,12 +311,11 @@ class PayInsAplazameApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsAplazame/payments/{PayInId}/refunds'.replace('{format}', 'json')
         path_params = {}
         if 'pay_in_id' in params:
             path_params['PayInId'] = params['pay_in_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -339,7 +336,7 @@ class PayInsAplazameApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/PayInsAplazame/payments/{PayInId}/refunds', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

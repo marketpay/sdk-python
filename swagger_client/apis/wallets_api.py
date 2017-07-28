@@ -108,12 +108,11 @@ class WalletsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Wallets/{WalletId}'.replace('{format}', 'json')
         path_params = {}
         if 'wallet_id' in params:
             path_params['WalletId'] = params['wallet_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -128,7 +127,7 @@ class WalletsApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Wallets/{WalletId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -206,14 +205,13 @@ class WalletsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Wallets'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
         if 'page' in params:
-            query_params['Page'] = params['page']
+            query_params.append(('Page', params['page']))
         if 'per_page' in params:
-            query_params['Per_Page'] = params['per_page']
+            query_params.append(('Per_Page', params['per_page']))
 
         header_params = {}
 
@@ -228,7 +226,7 @@ class WalletsApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Wallets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -315,16 +313,15 @@ class WalletsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Wallets/{WalletId}/transactions'.replace('{format}', 'json')
         path_params = {}
         if 'wallet_id' in params:
             path_params['WalletId'] = params['wallet_id']
 
-        query_params = {}
+        query_params = []
         if 'page' in params:
-            query_params['Page'] = params['page']
+            query_params.append(('Page', params['page']))
         if 'per_page' in params:
-            query_params['per_page'] = params['per_page']
+            query_params.append(('per_page', params['per_page']))
 
         header_params = {}
 
@@ -339,7 +336,7 @@ class WalletsApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Wallets/{WalletId}/transactions', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -419,10 +416,9 @@ class WalletsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Wallets'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -443,7 +439,7 @@ class WalletsApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/Wallets', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -528,12 +524,11 @@ class WalletsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Wallets/{WalletId}'.replace('{format}', 'json')
         path_params = {}
         if 'wallet_id' in params:
             path_params['WalletId'] = params['wallet_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -554,7 +549,7 @@ class WalletsApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'PUT',
+        return self.api_client.call_api('/v2.01/Wallets/{WalletId}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

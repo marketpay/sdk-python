@@ -35,7 +35,9 @@ class TestRedsysPreauthorizeResponse(unittest.TestCase):
         """
         Test RedsysPreauthorizeResponse
         """
-        model = swagger_client.models.redsys_preauthorize_response.RedsysPreauthorizeResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.redsys_preauthorize_response.RedsysPreauthorizeResponse()
+        pass
 
 
 if __name__ == '__main__':

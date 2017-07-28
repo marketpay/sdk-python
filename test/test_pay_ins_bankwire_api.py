@@ -35,7 +35,7 @@ class TestPayInsBankwireApi(unittest.TestCase):
         """
         Test case for pay_ins_bankwire_bankwire_get_payment
 
-        
+        View a Bankwire PayIn
         """
         pass
 
@@ -43,7 +43,7 @@ class TestPayInsBankwireApi(unittest.TestCase):
         """
         Test case for pay_ins_bankwire_bankwire_payment_by_direct
 
-        
+        Create a Bankwire PayIn
         """
         pass
 

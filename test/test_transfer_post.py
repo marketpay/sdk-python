@@ -35,7 +35,9 @@ class TestTransferPost(unittest.TestCase):
         """
         Test TransferPost
         """
-        model = swagger_client.models.transfer_post.TransferPost()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.transfer_post.TransferPost()
+        pass
 
 
 if __name__ == '__main__':

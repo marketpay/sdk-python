@@ -35,7 +35,9 @@ class TestRedsysPreauthorizationCancellationPost(unittest.TestCase):
         """
         Test RedsysPreauthorizationCancellationPost
         """
-        model = swagger_client.models.redsys_preauthorization_cancellation_post.RedsysPreauthorizationCancellationPost()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.redsys_preauthorization_cancellation_post.RedsysPreauthorizationCancellationPost()
+        pass
 
 
 if __name__ == '__main__':

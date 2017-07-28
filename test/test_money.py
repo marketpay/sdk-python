@@ -35,7 +35,9 @@ class TestMoney(unittest.TestCase):
         """
         Test Money
         """
-        model = swagger_client.models.money.Money()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.money.Money()
+        pass
 
 
 if __name__ == '__main__':

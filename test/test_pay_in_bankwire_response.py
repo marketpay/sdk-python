@@ -35,7 +35,9 @@ class TestPayInBankwireResponse(unittest.TestCase):
         """
         Test PayInBankwireResponse
         """
-        model = swagger_client.models.pay_in_bankwire_response.PayInBankwireResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.pay_in_bankwire_response.PayInBankwireResponse()
+        pass
 
 
 if __name__ == '__main__':

@@ -35,7 +35,7 @@ class TestPayOutsBankwireApi(unittest.TestCase):
         """
         Test case for pay_outs_bankwire_get
 
-        
+        View a Bankwire PayOut
         """
         pass
 
@@ -43,7 +43,7 @@ class TestPayOutsBankwireApi(unittest.TestCase):
         """
         Test case for pay_outs_bankwire_post
 
-        
+        Create a Bankwire PayOut
         """
         pass
 

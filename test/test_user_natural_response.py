@@ -35,7 +35,9 @@ class TestUserNaturalResponse(unittest.TestCase):
         """
         Test UserNaturalResponse
         """
-        model = swagger_client.models.user_natural_response.UserNaturalResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.user_natural_response.UserNaturalResponse()
+        pass
 
 
 if __name__ == '__main__':

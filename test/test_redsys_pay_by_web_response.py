@@ -35,7 +35,9 @@ class TestRedsysPayByWebResponse(unittest.TestCase):
         """
         Test RedsysPayByWebResponse
         """
-        model = swagger_client.models.redsys_pay_by_web_response.RedsysPayByWebResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.redsys_pay_by_web_response.RedsysPayByWebResponse()
+        pass
 
 
 if __name__ == '__main__':

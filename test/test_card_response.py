@@ -35,7 +35,9 @@ class TestCardResponse(unittest.TestCase):
         """
         Test CardResponse
         """
-        model = swagger_client.models.card_response.CardResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.card_response.CardResponse()
+        pass
 
 
 if __name__ == '__main__':

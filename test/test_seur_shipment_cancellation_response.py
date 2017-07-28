@@ -35,7 +35,9 @@ class TestSeurShipmentCancellationResponse(unittest.TestCase):
         """
         Test SeurShipmentCancellationResponse
         """
-        model = swagger_client.models.seur_shipment_cancellation_response.SeurShipmentCancellationResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.seur_shipment_cancellation_response.SeurShipmentCancellationResponse()
+        pass
 
 
 if __name__ == '__main__':

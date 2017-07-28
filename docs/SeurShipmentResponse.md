@@ -10,9 +10,9 @@ Name | Type | Description | Notes
 **status_pick_up_code** | **str** |  | [optional] 
 **status_delivery** | **str** |  | [optional] 
 **status_delivery_code** | **str** |  | [optional] 
-**id** | **str** |  | [optional] 
-**creation_date** | **int** |  | [optional] 
-**tag** | **str** |  | [optional] 
+**id** | **str** | The item&#39;s ID | [optional] 
+**creation_date** | **int** | When the item was created | [optional] 
+**tag** | **str** | Custom data that you can add to this item | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

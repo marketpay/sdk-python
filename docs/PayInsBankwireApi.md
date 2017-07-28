@@ -1,21 +1,23 @@
 # swagger_client.PayInsBankwireApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**pay_ins_bankwire_bankwire_get_payment**](PayInsBankwireApi.md#pay_ins_bankwire_bankwire_get_payment) | **GET** /v2.01/PayInsBankwire/payments/{PayInId} | 
-[**pay_ins_bankwire_bankwire_payment_by_direct**](PayInsBankwireApi.md#pay_ins_bankwire_bankwire_payment_by_direct) | **POST** /v2.01/PayInsBankwire/payments/direct | 
+[**pay_ins_bankwire_bankwire_get_payment**](PayInsBankwireApi.md#pay_ins_bankwire_bankwire_get_payment) | **GET** /v2.01/PayInsBankwire/payments/{PayInId} | View a Bankwire PayIn
+[**pay_ins_bankwire_bankwire_payment_by_direct**](PayInsBankwireApi.md#pay_ins_bankwire_bankwire_payment_by_direct) | **POST** /v2.01/PayInsBankwire/payments/direct | Create a Bankwire PayIn
 
 
 # **pay_ins_bankwire_bankwire_get_payment**
 > PayInBankwireResponse pay_ins_bankwire_bankwire_get_payment(pay_in_id)
 
+View a Bankwire PayIn
 
+View a Bankwire PayIn
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -26,9 +28,10 @@ swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = swagger_client.PayInsBankwireApi()
-pay_in_id = 789 # int | 
+pay_in_id = 789 # int | The Id of a payment
 
 try: 
+    # View a Bankwire PayIn
     api_response = api_instance.pay_ins_bankwire_bankwire_get_payment(pay_in_id)
     pprint(api_response)
 except ApiException as e:
@@ -39,7 +42,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **pay_in_id** | **int**|  | 
+ **pay_in_id** | **int**| The Id of a payment | 
 
 ### Return type
 
@@ -59,11 +62,13 @@ Name | Type | Description  | Notes
 # **pay_ins_bankwire_bankwire_payment_by_direct**
 > PayInBankwireResponse pay_ins_bankwire_bankwire_payment_by_direct(bankwire_pay_in=bankwire_pay_in)
 
+Create a Bankwire PayIn
 
+Create a Bankwire PayIn.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -74,9 +79,10 @@ swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 
 # create an instance of the API class
 api_instance = swagger_client.PayInsBankwireApi()
-bankwire_pay_in = swagger_client.PayInBankwirePost() # PayInBankwirePost |  (optional)
+bankwire_pay_in = swagger_client.PayInBankwirePost() # PayInBankwirePost | Redsys PayIn Request Object params (optional)
 
 try: 
+    # Create a Bankwire PayIn
     api_response = api_instance.pay_ins_bankwire_bankwire_payment_by_direct(bankwire_pay_in=bankwire_pay_in)
     pprint(api_response)
 except ApiException as e:
@@ -87,7 +93,7 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **bankwire_pay_in** | [**PayInBankwirePost**](PayInBankwirePost.md)|  | [optional] 
+ **bankwire_pay_in** | [**PayInBankwirePost**](PayInBankwirePost.md)| Redsys PayIn Request Object params | [optional] 
 
 ### Return type
 

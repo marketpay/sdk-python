@@ -35,7 +35,9 @@ class TestUserResponse(unittest.TestCase):
         """
         Test UserResponse
         """
-        model = swagger_client.models.user_response.UserResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.user_response.UserResponse()
+        pass
 
 
 if __name__ == '__main__':

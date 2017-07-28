@@ -35,7 +35,9 @@ class TestPaymentRedsysData(unittest.TestCase):
         """
         Test PaymentRedsysData
         """
-        model = swagger_client.models.payment_redsys_data.PaymentRedsysData()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.payment_redsys_data.PaymentRedsysData()
+        pass
 
 
 if __name__ == '__main__':

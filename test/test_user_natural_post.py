@@ -35,7 +35,9 @@ class TestUserNaturalPost(unittest.TestCase):
         """
         Test UserNaturalPost
         """
-        model = swagger_client.models.user_natural_post.UserNaturalPost()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.user_natural_post.UserNaturalPost()
+        pass
 
 
 if __name__ == '__main__':

@@ -42,6 +42,8 @@ class TransactionsApi(object):
 
     def transactions_get_list(self, **kwargs):
         """
+        View a Transaction
+        A Transaction is any movement of money
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -54,6 +56,8 @@ class TransactionsApi(object):
             for asynchronous request. (optional)
         :param int page:
         :param int per_page:
+        :param int before_date:
+        :param int after_date:
         :return: ResponseListTransactionResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -67,6 +71,8 @@ class TransactionsApi(object):
 
     def transactions_get_list_with_http_info(self, **kwargs):
         """
+        View a Transaction
+        A Transaction is any movement of money
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -79,12 +85,14 @@ class TransactionsApi(object):
             for asynchronous request. (optional)
         :param int page:
         :param int per_page:
+        :param int before_date:
+        :param int after_date:
         :return: ResponseListTransactionResponse
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['page', 'per_page']
+        all_params = ['page', 'per_page', 'before_date', 'after_date']
         all_params.append('callback')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -103,14 +111,17 @@ class TransactionsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Transactions'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
         if 'page' in params:
-            query_params['Page'] = params['page']
+            query_params.append(('Page', params['page']))
         if 'per_page' in params:
-            query_params['Per_Page'] = params['per_page']
+            query_params.append(('Per_Page', params['per_page']))
+        if 'before_date' in params:
+            query_params.append(('BeforeDate', params['before_date']))
+        if 'after_date' in params:
+            query_params.append(('AfterDate', params['after_date']))
 
         header_params = {}
 
@@ -125,7 +136,7 @@ class TransactionsApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Transactions', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

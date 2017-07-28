@@ -35,7 +35,9 @@ class TestUniversalPayTokenizationResponse(unittest.TestCase):
         """
         Test UniversalPayTokenizationResponse
         """
-        model = swagger_client.models.universal_pay_tokenization_response.UniversalPayTokenizationResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.universal_pay_tokenization_response.UniversalPayTokenizationResponse()
+        pass
 
 
 if __name__ == '__main__':

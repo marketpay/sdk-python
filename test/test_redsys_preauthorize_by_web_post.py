@@ -35,7 +35,9 @@ class TestRedsysPreauthorizeByWebPost(unittest.TestCase):
         """
         Test RedsysPreauthorizeByWebPost
         """
-        model = swagger_client.models.redsys_preauthorize_by_web_post.RedsysPreauthorizeByWebPost()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.redsys_preauthorize_by_web_post.RedsysPreauthorizeByWebPost()
+        pass
 
 
 if __name__ == '__main__':

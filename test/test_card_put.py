@@ -35,7 +35,9 @@ class TestCardPut(unittest.TestCase):
         """
         Test CardPut
         """
-        model = swagger_client.models.card_put.CardPut()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.card_put.CardPut()
+        pass
 
 
 if __name__ == '__main__':

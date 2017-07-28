@@ -35,7 +35,9 @@ class TestUserLegalPut(unittest.TestCase):
         """
         Test UserLegalPut
         """
-        model = swagger_client.models.user_legal_put.UserLegalPut()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.user_legal_put.UserLegalPut()
+        pass
 
 
 if __name__ == '__main__':

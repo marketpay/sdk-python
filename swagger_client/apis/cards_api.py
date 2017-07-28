@@ -108,12 +108,11 @@ class CardsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Cards/{CardId}'.replace('{format}', 'json')
         path_params = {}
         if 'card_id' in params:
             path_params['CardId'] = params['card_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -128,7 +127,7 @@ class CardsApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Cards/{CardId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -206,14 +205,13 @@ class CardsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Cards'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
         if 'page' in params:
-            query_params['Page'] = params['page']
+            query_params.append(('Page', params['page']))
         if 'per_page' in params:
-            query_params['Per_Page'] = params['per_page']
+            query_params.append(('Per_Page', params['per_page']))
 
         header_params = {}
 
@@ -228,7 +226,7 @@ class CardsApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Cards', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -313,12 +311,11 @@ class CardsApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Cards/{CardId}'.replace('{format}', 'json')
         path_params = {}
         if 'card_id' in params:
             path_params['CardId'] = params['card_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -339,7 +336,7 @@ class CardsApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'PUT',
+        return self.api_client.call_api('/v2.01/Cards/{CardId}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

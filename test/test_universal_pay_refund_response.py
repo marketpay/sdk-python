@@ -35,7 +35,9 @@ class TestUniversalPayRefundResponse(unittest.TestCase):
         """
         Test UniversalPayRefundResponse
         """
-        model = swagger_client.models.universal_pay_refund_response.UniversalPayRefundResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.universal_pay_refund_response.UniversalPayRefundResponse()
+        pass
 
 
 if __name__ == '__main__':

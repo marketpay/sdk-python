@@ -108,12 +108,11 @@ class ShipmentSeurApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation'.replace('{format}', 'json')
         path_params = {}
         if 'shipment_id' in params:
             path_params['ShipmentId'] = params['shipment_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -128,7 +127,7 @@ class ShipmentSeurApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/ShipmentSeur/shipments/{ShipmentId}/cancellation', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -208,10 +207,9 @@ class ShipmentSeurApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/ShipmentSeur/shipments'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -232,7 +230,7 @@ class ShipmentSeurApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/ShipmentSeur/shipments', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -315,12 +313,11 @@ class ShipmentSeurApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/ShipmentSeur/shipments/{ShipmentId}'.replace('{format}', 'json')
         path_params = {}
         if 'shipment_id' in params:
             path_params['ShipmentId'] = params['shipment_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -335,7 +332,7 @@ class ShipmentSeurApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/ShipmentSeur/shipments/{ShipmentId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,

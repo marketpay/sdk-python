@@ -108,12 +108,11 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/{UserId}'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -128,7 +127,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Users/{UserId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -216,14 +215,13 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/{UserId}/bankaccounts/{BankAccountId}'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
         if 'bank_account_id' in params:
             path_params['BankAccountId'] = params['bank_account_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -238,7 +236,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Users/{UserId}/bankaccounts/{BankAccountId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -325,16 +323,15 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/{UserId}/bankaccounts'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
         if 'page' in params:
-            query_params['Page'] = params['page']
+            query_params.append(('Page', params['page']))
         if 'per_page' in params:
-            query_params['Per_Page'] = params['per_page']
+            query_params.append(('Per_Page', params['per_page']))
 
         header_params = {}
 
@@ -349,7 +346,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Users/{UserId}/bankaccounts', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -436,16 +433,15 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/{UserId}/cards'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
         if 'page' in params:
-            query_params['Page'] = params['page']
+            query_params.append(('Page', params['page']))
         if 'per_page' in params:
-            query_params['Per_Page'] = params['per_page']
+            query_params.append(('Per_Page', params['per_page']))
 
         header_params = {}
 
@@ -460,7 +456,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Users/{UserId}/cards', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -543,12 +539,11 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/legal/{UserId}'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -563,7 +558,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Users/legal/{UserId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -645,14 +640,13 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
         if 'page' in params:
-            query_params['Page'] = params['page']
+            query_params.append(('Page', params['page']))
         if 'per_page' in params:
-            query_params['Per_Page'] = params['per_page']
+            query_params.append(('Per_Page', params['per_page']))
 
         header_params = {}
 
@@ -667,7 +661,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Users', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -750,12 +744,11 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/natural/{UserId}'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -770,7 +763,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Users/natural/{UserId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -857,16 +850,15 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/{UserId}/transactions'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
         if 'page' in params:
-            query_params['Page'] = params['page']
+            query_params.append(('Page', params['page']))
         if 'per_page' in params:
-            query_params['Per_Page'] = params['per_page']
+            query_params.append(('Per_Page', params['per_page']))
 
         header_params = {}
 
@@ -881,7 +873,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Users/{UserId}/transactions', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -968,16 +960,15 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/{UserId}/wallets'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
         if 'page' in params:
-            query_params['Page'] = params['page']
+            query_params.append(('Page', params['page']))
         if 'per_page' in params:
-            query_params['Per_Page'] = params['per_page']
+            query_params.append(('Per_Page', params['per_page']))
 
         header_params = {}
 
@@ -992,7 +983,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/Users/{UserId}/wallets', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1077,12 +1068,11 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/{UserId}/bankaccounts/CA'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -1103,7 +1093,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/Users/{UserId}/bankaccounts/CA', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1188,12 +1178,11 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/{UserId}/bankaccounts/GB'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -1214,7 +1203,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/Users/{UserId}/bankaccounts/GB', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1299,12 +1288,11 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/{UserId}/bankaccounts/IBAN'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -1325,7 +1313,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/Users/{UserId}/bankaccounts/IBAN', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1410,12 +1398,11 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/{UserId}/bankaccounts/OTHER'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -1436,7 +1423,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/Users/{UserId}/bankaccounts/OTHER', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1521,12 +1508,11 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/{UserId}/bankaccounts/US'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -1547,7 +1533,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/Users/{UserId}/bankaccounts/US', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1627,10 +1613,9 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/legal'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -1651,7 +1636,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/Users/legal', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1731,10 +1716,9 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/natural'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -1755,7 +1739,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/Users/natural', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1840,12 +1824,11 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/legal/{UserId}'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -1866,7 +1849,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'PUT',
+        return self.api_client.call_api('/v2.01/Users/legal/{UserId}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -1951,12 +1934,11 @@ class UsersApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/Users/natural/{UserId}'.replace('{format}', 'json')
         path_params = {}
         if 'user_id' in params:
             path_params['UserId'] = params['user_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -1977,7 +1959,7 @@ class UsersApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'PUT',
+        return self.api_client.call_api('/v2.01/Users/natural/{UserId}', 'PUT',
                                         path_params,
                                         query_params,
                                         header_params,

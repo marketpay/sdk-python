@@ -42,6 +42,8 @@ class PayInsUniversalPayApi(object):
 
     def pay_ins_universal_pay_get_universal_pay_tokenization(self, token_id, **kwargs):
         """
+        View a UniversalPay card tokenization status
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -52,7 +54,7 @@ class PayInsUniversalPayApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param int token_id: (required)
+        :param int token_id: The Id of a tokenization (required)
         :return: UniversalPayTokenizationResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -66,6 +68,8 @@ class PayInsUniversalPayApi(object):
 
     def pay_ins_universal_pay_get_universal_pay_tokenization_with_http_info(self, token_id, **kwargs):
         """
+        View a UniversalPay card tokenization status
+        
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -76,7 +80,7 @@ class PayInsUniversalPayApi(object):
 
         :param callback function: The callback function
             for asynchronous request. (optional)
-        :param int token_id: (required)
+        :param int token_id: The Id of a tokenization (required)
         :return: UniversalPayTokenizationResponse
                  If the method is called asynchronously,
                  returns the request thread.
@@ -104,12 +108,11 @@ class PayInsUniversalPayApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsUniversalPay/token/{TokenId}'.replace('{format}', 'json')
         path_params = {}
         if 'token_id' in params:
             path_params['TokenId'] = params['token_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -124,7 +127,7 @@ class PayInsUniversalPayApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/PayInsUniversalPay/token/{TokenId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -207,12 +210,11 @@ class PayInsUniversalPayApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsUniversalPay/payments/{PayInId}'.replace('{format}', 'json')
         path_params = {}
         if 'pay_in_id' in params:
             path_params['PayInId'] = params['pay_in_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -227,7 +229,7 @@ class PayInsUniversalPayApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'GET',
+        return self.api_client.call_api('/v2.01/PayInsUniversalPay/payments/{PayInId}', 'GET',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -245,7 +247,7 @@ class PayInsUniversalPayApi(object):
     def pay_ins_universal_pay_universal_pay_post_payment_by_web(self, **kwargs):
         """
         Create a UniversalPay PayIn Request
-        Prepares a payment on UniversalPay. The data returned is used to show the UniversalPay interface to the user.  Once the payment is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\" -H \"Cache-Control: no-cache\" -H \"Postman-Token: c313f10b-0de1-227e-53d2-f721f25cd79d\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
+        Prepares a payment on UniversalPay. The data returned is used to show the UniversalPay interface to the user.  Once the payment is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\" -H \"Cache-Control: no-cache\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -271,7 +273,7 @@ class PayInsUniversalPayApi(object):
     def pay_ins_universal_pay_universal_pay_post_payment_by_web_with_http_info(self, **kwargs):
         """
         Create a UniversalPay PayIn Request
-        Prepares a payment on UniversalPay. The data returned is used to show the UniversalPay interface to the user.  Once the payment is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\" -H \"Cache-Control: no-cache\" -H \"Postman-Token: c313f10b-0de1-227e-53d2-f721f25cd79d\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
+        Prepares a payment on UniversalPay. The data returned is used to show the UniversalPay interface to the user.  Once the payment is done, the user will be redirected to one of UrlOk or UrlKo passed parameters.  In order to redirect the user, a Post request with Content-Type of application/x-www-form-urlencoded must be executed from the user's browser.  Below there is an example of a request where the params surrounded by curly braces have to be replaced with the response's params.  curl -X POST -H \"Content-Type: application/x-www-form-urlencoded\" -H \"Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8\" -H \"Cache-Control: no-cache\" -d 'Ds_SignatureVersion={Ds_SignatureVersion}&amp;Ds_MerchantParameters={Ds_MerchantParameters}&amp;Ds_Signature={Ds_Signature}' \"{Url}\"
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please define a `callback` function
         to be invoked when receiving the response.
@@ -307,10 +309,9 @@ class PayInsUniversalPayApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsUniversalPay/payments/web'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -331,7 +332,7 @@ class PayInsUniversalPayApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/PayInsUniversalPay/payments/web', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -416,12 +417,11 @@ class PayInsUniversalPayApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsUniversalPay/payments/{PayInId}/refunds'.replace('{format}', 'json')
         path_params = {}
         if 'pay_in_id' in params:
             path_params['PayInId'] = params['pay_in_id']
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -442,7 +442,7 @@ class PayInsUniversalPayApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/PayInsUniversalPay/payments/{PayInId}/refunds', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,
@@ -518,10 +518,9 @@ class PayInsUniversalPayApi(object):
 
         collection_formats = {}
 
-        resource_path = '/v2.01/PayInsUniversalPay/token/web'.replace('{format}', 'json')
         path_params = {}
 
-        query_params = {}
+        query_params = []
 
         header_params = {}
 
@@ -542,7 +541,7 @@ class PayInsUniversalPayApi(object):
         # Authentication setting
         auth_settings = ['oauth2']
 
-        return self.api_client.call_api(resource_path, 'POST',
+        return self.api_client.call_api('/v2.01/PayInsUniversalPay/token/web', 'POST',
                                         path_params,
                                         query_params,
                                         header_params,

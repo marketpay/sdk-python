@@ -35,7 +35,9 @@ class TestRefundReason(unittest.TestCase):
         """
         Test RefundReason
         """
-        model = swagger_client.models.refund_reason.RefundReason()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.refund_reason.RefundReason()
+        pass
 
 
 if __name__ == '__main__':

@@ -1,11 +1,11 @@
 # swagger_client.TransfersApi
 
-All URIs are relative to *https://localhost/*
+All URIs are relative to *https://localhost*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**transfers_get**](TransfersApi.md#transfers_get) | **GET** /v2.01/Transfers/{TransferId} | View a Transfer
-[**transfers_get_list**](TransfersApi.md#transfers_get_list) | **GET** /v2.01/Transfers | 
+[**transfers_get_list**](TransfersApi.md#transfers_get_list) | **GET** /v2.01/Transfers | View a Transfer
 [**transfers_post**](TransfersApi.md#transfers_post) | **POST** /v2.01/Transfers | Create a Transfer
 
 
@@ -18,7 +18,7 @@ A Transfer is a request to relocate e-money from one wallet to another wallet.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -61,13 +61,15 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **transfers_get_list**
-> ResponseListTransferResponse transfers_get_list(page=page, per_page=per_page)
+> ResponseListTransferResponse transfers_get_list(page=page, per_page=per_page, before_date=before_date, after_date=after_date)
 
+View a Transfer
 
+A Transfer is a request to relocate e-money from one wallet to another wallet.
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException
@@ -80,9 +82,12 @@ swagger_client.configuration.access_token = 'YOUR_ACCESS_TOKEN'
 api_instance = swagger_client.TransfersApi()
 page = 56 # int |  (optional)
 per_page = 56 # int |  (optional)
+before_date = 789 # int |  (optional)
+after_date = 789 # int |  (optional)
 
 try: 
-    api_response = api_instance.transfers_get_list(page=page, per_page=per_page)
+    # View a Transfer
+    api_response = api_instance.transfers_get_list(page=page, per_page=per_page, before_date=before_date, after_date=after_date)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling TransfersApi->transfers_get_list: %s\n" % e)
@@ -94,6 +99,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **page** | **int**|  | [optional] 
  **per_page** | **int**|  | [optional] 
+ **before_date** | **int**|  | [optional] 
+ **after_date** | **int**|  | [optional] 
 
 ### Return type
 
@@ -119,7 +126,7 @@ Create a Transfer
 
 ### Example 
 ```python
-from __future__ import print_statement
+from __future__ import print_function
 import time
 import swagger_client
 from swagger_client.rest import ApiException

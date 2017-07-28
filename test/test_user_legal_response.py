@@ -35,7 +35,9 @@ class TestUserLegalResponse(unittest.TestCase):
         """
         Test UserLegalResponse
         """
-        model = swagger_client.models.user_legal_response.UserLegalResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.user_legal_response.UserLegalResponse()
+        pass
 
 
 if __name__ == '__main__':

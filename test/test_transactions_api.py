@@ -35,7 +35,7 @@ class TestTransactionsApi(unittest.TestCase):
         """
         Test case for transactions_get_list
 
-        
+        View a Transaction
         """
         pass
 

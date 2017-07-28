@@ -35,7 +35,9 @@ class TestTransactionResponse(unittest.TestCase):
         """
         Test TransactionResponse
         """
-        model = swagger_client.models.transaction_response.TransactionResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.transaction_response.TransactionResponse()
+        pass
 
 
 if __name__ == '__main__':

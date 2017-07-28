@@ -35,7 +35,9 @@ class TestAplazamePayByWebPost(unittest.TestCase):
         """
         Test AplazamePayByWebPost
         """
-        model = swagger_client.models.aplazame_pay_by_web_post.AplazamePayByWebPost()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.aplazame_pay_by_web_post.AplazamePayByWebPost()
+        pass
 
 
 if __name__ == '__main__':

@@ -35,7 +35,9 @@ class TestCustomApiErrorResponse(unittest.TestCase):
         """
         Test CustomApiErrorResponse
         """
-        model = swagger_client.models.custom_api_error_response.CustomApiErrorResponse()
+        # FIXME: construct object with mandatory attributes with example values
+        #model = swagger_client.models.custom_api_error_response.CustomApiErrorResponse()
+        pass
 
 
 if __name__ == '__main__':
